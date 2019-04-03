@@ -8,6 +8,8 @@ Here are a few steps to help you get started:
 
 * [Getting an API Key]()
 * [Creating an API Call]()
+    * [Authentication]()
+    * [Example Call (Getting your Company)]()
 * [Understanding the Response]()
 
 ## Getting an API Key
