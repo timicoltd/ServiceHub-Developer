@@ -26,3 +26,4 @@ To generate an API Key you will need to login to the ServiceHub Web Portal at ht
 
 Once logged in, you will be required to navigate to the 'Settings' page, under the 'Company' Menu tab (as shown in the image below).
 
+[](https://github.com/timicoltd/ServiceHub-API/blob/master/GitHub/Company-Settings.png)
