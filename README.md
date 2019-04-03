@@ -28,4 +28,11 @@ Once logged in, you will be required to navigate to the 'Settings' page, under t
 
 ![](https://github.com/timicoltd/ServiceHub-API/blob/master/GitHub/Company-Settings.png)
 
-From this page (ensuring you have navigated to the 'Developer' section of this page) you will be able to click the Generate API Key button and follow the on-screen steps to get your API Key. (**Please note that you will only be able to see this key once and would need to regenerate the key if lost, so make a note of your API Key at this stage (and store it somewhere secure).**)
+From this page (ensuring you have navigated to the 'Developer' section of this page) you will be able to click the Generate API Key button and follow the on-screen steps to get your API Key. 
+_**Please note that you will only be able to see this key once and would need to regenerate the key if lost, so make a note of your API Key at this stage (and store it somewhere secure).**_
+
+During the on-screen steps you'll be asked to provide a name for the API Key, this is for your reference only. It allows for you to refer to an API Key (as you may have many) without showing you the actual API Key (ash shown in the image below).
+
+![](https://github.com/timicoltd/ServiceHub-API/blob/master/GitHub/API%20Key%20Name.png)
+
+
