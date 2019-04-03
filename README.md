@@ -42,4 +42,15 @@ As long as all requirements have been met, you'll be able to generate your API K
  
 _**Please note that you will only be able to see this key once and would need to regenerate the key if lost, so make a note of your API Key at this stage (and store it somewhere secure).**_
 
+## Creating an API Call
+
+Creating an API call is as simple as sending a https request.
+
+### Authentication
+
+All API calls need to be authenticated by your API Key as a Bearer Token.
+
+```sh
+$ curl -H "Authorization: Bearer {API KEY}" https://servicehub-api.timico.com/company
+```
 
