@@ -1,1 +1,3 @@
 # ServiceHub-API
+
+## Getting Started
