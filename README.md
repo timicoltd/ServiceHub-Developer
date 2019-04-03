@@ -20,19 +20,24 @@ Getting an API Key is done via the ServiceHub Web Portal, found at https://porta
 * Must have an account on the ServiceHub Web Portal - [Don't have an account?]()
 * Must have the 'Admin' level permissions in order to view the 'Company Settings' - [Not an Admin?]()
 
+### Process
+
 As long as all requirements have been met, you'll be able to generate your API Key.
 
-To generate an API Key you will need to login to the ServiceHub Web Portal at https://portal.timico.com/login
+ 1. To generate an API Key you will need to login to the ServiceHub Web Portal at https://portal.timico.com/login.
 
-Once logged in, you will be required to navigate to the 'Settings' page, under the 'Company' Menu tab (as shown in the image below).
+ 2. Navigate to the 'Settings' page, under the 'Company' Menu tab (as shown in the image below).
 
 ![](https://github.com/timicoltd/ServiceHub-API/blob/master/GitHub/Company-Settings.png)
 
-From this page (ensuring you have navigated to the 'Developer' section of this page) you will be able to click the Generate API Key button and follow the on-screen steps to get your API Key. 
+ 3. Select the 'Developer' Heading.
+ 
+ 4. Click the Generate API Key button.
+ 
+ 5. Provide the API Key name, this is for your reference only. It allows for you to refer to an API Key (as you may have many) without showing you the actual API Key.
+ 
+ 6. Once submitted, you will be shown your API Key for you to store securely and use whilst calling ServiceHub API.
+ 
 _**Please note that you will only be able to see this key once and would need to regenerate the key if lost, so make a note of your API Key at this stage (and store it somewhere secure).**_
-
-During the on-screen steps you'll be asked to provide a name for the API Key, this is for your reference only. It allows for you to refer to an API Key (as you may have many) without showing you the actual API Key (ash shown in the image below).
-
-![](https://github.com/timicoltd/ServiceHub-API/blob/master/GitHub/API%20Key%20Name.png)
 
 
