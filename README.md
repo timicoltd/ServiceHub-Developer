@@ -50,6 +50,8 @@ Creating an API call is as simple as sending a https request.
 
 All API calls need to be authenticated by your API Key as a Bearer Token.
 
+To do so, you need to add the Authorization header to your request, with the value as **'Bearer {APIKEY}'** - Replacing {APIKEY} with your API Key from earlier.
+
 ```sh
 $ curl -H "Authorization: Bearer {API KEY}" https://servicehub-api.timico.com/company
 ```
