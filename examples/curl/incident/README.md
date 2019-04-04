@@ -27,7 +27,7 @@ Retrieve all incidents for your company by sending a GET Request to https://serv
 $ curl -H "Authorization: Bearer {API KEY}" GET https://servicehub-api.timico.com/incident
 ```
 
-The expected result would be a JSON Array (called results), to which would contain a list of objects (Incidents). An example response would be:
+The expected result would be a JSON Object containing an array (called results), to which would contain a list of objects (Incidents). An example response would be:
 
 ```json
 {
