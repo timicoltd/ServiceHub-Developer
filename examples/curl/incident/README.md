@@ -50,6 +50,7 @@ The expected result would be a JSON Array (called results), to which would conta
             "resolvedBy": "",
             "resolvedAt": null
         }
+    ]
 }
 ```
 
