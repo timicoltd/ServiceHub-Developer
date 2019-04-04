@@ -53,6 +53,23 @@ All API calls need to be authenticated by your API Key as a Bearer Token.
 To do so, you need to add the Authorization header to your request, with the value as **'Bearer {APIKEY}'** - Replacing {APIKEY} with your API Key from earlier.
 
 ```sh
+$ curl -H "Authorization: Bearer {API KEY}" https://servicehub-api.timico.com/
+```
+
+### Example Call (Getting your Company)
+
+We've made a simple testing endpoint that returns back the company you are requesting for. 
+
+The test endpoint would be a GET request to https://servicehub-api.timico.com/company
+
+```sh
 $ curl -H "Authorization: Bearer {API KEY}" https://servicehub-api.timico.com/company
 ```
 
+The expected result would be a JSON Object, containing your Company's Name (as shown below)
+
+```json
+{
+    "company": "Timico Ltd"
+}
+```
