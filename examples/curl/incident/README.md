@@ -24,7 +24,7 @@ All of the calls above require an Authorization Bearer token (API Key).
 Retrieve all incidents for your company by sending a GET Request to https://servicehub-api.timico.com/incident
 
 ```sh
-$ curl -H "Authorization: Bearer {API KEY}" https://servicehub-api.timico.com/incident
+$ curl -H "Authorization: Bearer {API KEY}" GET https://servicehub-api.timico.com/incident
 ```
 
 The expected result would be a JSON Array (called results), to which would contain a list of objects (Incidents). An example response would be:
