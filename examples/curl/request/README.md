@@ -78,17 +78,15 @@ The expected response would be a JSON Object representing the Request you have c
 
 ```json
 {
-        {
-            "id": "93984njfidjifdigna989fj9jfuua9h8",
-            "description": "Request Description",
-            "shortDescription": "Short Description",
-            "state": "Open",
-            "openedAt": "2019-04-01T11:37:07",
-            "requestItemNumber": "RITM0000000",
-            "requestNumber": "REQ0000000",
-            "requestedFor": "company.api.key.name",
-            "active": true
-        }
+    "id": "93984njfidjifdigna989fj9jfuua9h8",
+    "description": "Request Description",
+    "shortDescription": "Short Description",
+    "state": "Open",
+    "openedAt": "2019-04-01T11:37:07",
+    "requestItemNumber": "RITM0000000",
+    "requestNumber": "REQ0000000",
+    "requestedFor": "company.api.key.name",
+    "active": true
 }
 ```
 * **ID** - The identification number for this request (this ID would be used in future calls and is used to address a certain Request via the API).
