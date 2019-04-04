@@ -1,6 +1,6 @@
 # ServiceHub-API (Requests)
 
-Timico ServiceHub-API allows you to call the Request endpoint to get all requests for your company, more information on a specific request, create an request, view comments for an request and create new comments on an request.
+Timico ServiceHub-API allows you to call the Request endpoint to get all requests for your company, more information on a specific request, create a request, view comments for a request and create new comments on a request.
 
 ## Prerequisites
 
@@ -21,7 +21,7 @@ All of the calls above require an Authorization Bearer token (API Key).
 
 ## Get Requests
 
-Retrieve all request for your company by sending a GET Request to https://servicehub-api.timico.com/request
+Retrieve all requests for your company by sending a GET Request to https://servicehub-api.timico.com/request
 
 ```sh
 $ curl -H "Authorization: Bearer {API KEY}" GET https://servicehub-api.timico.com/request
@@ -34,7 +34,7 @@ The expected result would be a JSON Object containing an array (called results),
     "results": [
         {
             "id": "93984njfidjifdigna989fj9jfuua9h8",
-            "description": "Request Description,
+            "description": "Request Description",
             "shortDescription": "Short Description",
             "state": "Open",
             "openedAt": "2019-04-01T11:37:07",
@@ -80,7 +80,7 @@ The expected response would be a JSON Object representing the Request you have c
 {
         {
             "id": "93984njfidjifdigna989fj9jfuua9h8",
-            "description": "Request Description,
+            "description": "Request Description",
             "shortDescription": "Short Description",
             "state": "Open",
             "openedAt": "2019-04-01T11:37:07",
@@ -91,24 +91,24 @@ The expected response would be a JSON Object representing the Request you have c
         }
 }
 ```
-* **ID** - The identification number for this incident (this ID would be used in future calls and is used to address a certain Request via the API).
+* **ID** - The identification number for this request (this ID would be used in future calls and is used to address a certain Request via the API).
 * **Request Item Number** - This is the Request Item reference number (this is used for referencing the Request Item's of a Request via the ServiceHub Web Portal and with Timico staff).
 * **Request Number** - This is the Request reference number (this is used for referencing the Request via the ServiceHub Web Portal and with Timico staff).
 * **Short Description** - A brief description of the Request that has been raised.
 * **Description** - A full description of the Request.
-* **State** - What state is the Inciddent in, this could be 'New' or 'Closed' for example.
+* **State** - What state is the Request in, this could be 'New' or 'Closed' for example.
 
 All other fields are more self explanatory as to what they represent.
 
 ## Create Request
 
-Create an Request for Timico staff to handle, this allows for you to complete the same process available on the ServiceHub Web Portal but via our API, so you can develop your own system to submit an Request for you.
+Create a Request for Timico staff to handle, this allows for you to complete the same process available on the ServiceHub Web Portal but via our API, so you can develop your own system to submit a Request for you.
 
-You can create an Request by sending a POST request to https://servicehub-api.timico.com/request with a JSON Body.
+You can create a Request by sending a POST request to https://servicehub-api.timico.com/request with a JSON Body.
 
 ### Request Object
 
-You will need to send a JSON Object with this request, containing the follow (to complete the request)
+You will need to send a JSON Object with this request, containing the follow:
 
 ```json
 {
@@ -130,7 +130,7 @@ $ curl -H "Authorization: Bearer {API KEY}" POST -d '{
 
 ### Response Object
 
-The expected response would be a JSON Object containing the newly created Call (To be triaged into a Request).
+The expected response would be a JSON Object containing the newly created Call (to be triaged into a Request by Timico Staff).
 
 ```json 
 {
@@ -140,8 +140,8 @@ The expected response would be a JSON Object containing the newly created Call (
     "shortDescription": "Please Provide Short Description Here"
 }
 ```
-* **ID** - The identification number for this call (this ID would be used in future calls and is used to address a certain Calls via the API).
-* **Number** - This is the Call reference number (this is used for referencing the Call via the ServiceHub Web Portal and with Timico staff).
+* **ID** - The identification number for this call (this ID would be used in future calls and is used to address a certain calls via the API).
+* **Number** - This is the Call's reference number (this is used for referencing the call via the ServiceHub Web Portal and with Timico staff).
 * **Short Description** - The same as the one you sent in the POST Request
 
 ## Get Comments
