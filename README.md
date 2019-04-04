@@ -6,7 +6,7 @@ Timico ServiceHub-API requires a Timico customer account at https://portal.timic
 
 Here are a few steps to help you get started:
 
-* [Getting an API Key]()
+* [Getting an API Key](## Getting an API Key)
 * [Creating an API Call]()
     * [Authentication]()
     * [Example Call (Getting your Company)]()
