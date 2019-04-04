@@ -33,7 +33,7 @@ As long as all requirements have been met, you'll be able to generate your API K
 
  2. Navigate to the 'Settings' page, under the 'Company' Menu tab (as shown in the image below).
 
-![](https://github.com/timicoltd/ServiceHub-API/blob/master/GitHub/Company-Settings.png)
+![](https://github.com/timicoltd/ServiceHub-API/blob/master/images/Company-Settings.png)
 
  3. Select the 'Developer' Heading.
  
