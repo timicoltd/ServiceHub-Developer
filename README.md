@@ -21,9 +21,9 @@ Getting an API Key is done via the ServiceHub Web Portal, found at https://porta
 
 ### Requirements
 
-* Must be a Timico Customer - [Not a customer?](https://www.timico.com)
-* Must have an account on the ServiceHub Web Portal - [Don't have an account?]()
-* Must have the 'Admin' level permissions in order to view the 'Company Settings' - [Not an Admin?]()
+* Must be a Timico Customer - [Not a customer?](#not-a-customer?)
+* Must have an account on the ServiceHub Web Portal - [Don't have an account?](#don't-have-an-account?)
+* Must have the 'Admin' level permissions in order to view the 'Company Settings' - [Not an Admin?](#not-an-admin?)
 
 ### Process
 
