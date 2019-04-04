@@ -66,7 +66,7 @@ We've made a simple testing endpoint that returns back the company tied to your 
 The test endpoint would be a GET request to https://servicehub-api.timico.com/company
 
 ```sh
-$ curl -H "Authorization: Bearer {API KEY}" https://servicehub-api.timico.com/company
+$ curl -H "Authorization: Bearer {API KEY}" GET https://servicehub-api.timico.com/company
 ```
 
 The expected result would be a JSON Object, containing your Company's Name (as shown below)
