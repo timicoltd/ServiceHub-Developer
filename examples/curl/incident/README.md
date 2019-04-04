@@ -145,7 +145,7 @@ $ curl -H "Authorization: Bearer {API KEY}" POST -d '{
 }' https://servicehub-api.timico.com/incident
 ```
 
-## Response Object
+### Response Object
 
 The expected response would be a JSON Object containing the newly created Incident.
 
@@ -159,3 +159,67 @@ The expected response would be a JSON Object containing the newly created Incide
 * **ID** - The identification number for this incident (this ID would be used in future calls and is used to address a certain Incident via the API).
 * **Number** - This is the Incident reference number (this is used for referencing the Incident via the ServiceHub Web Portal and with Timico staff).
 * **Short Description** - The same as the one you sent in the POST Request
+
+## Update Incident
+
+Whilst you cannot update information on an Incident, our view of updating an Incident is to Open/Close the Incident.
+
+You can update an Incident by sending a PUT request to https://servicehub-api.timico.com/incident/{id} with a Update Incident JSON Object.
+
+### Close an Incident
+
+To close an Incident you need to send a PUT request to the https://servicehub-api.timico.com/incident/{id} - with {id} being the identification number of the Incident.
+
+You also need to provide a request object as follows:
+
+```json
+{
+	"State" : "6",
+	"CloseNotes" : "Why are you closing the Incident?"
+}
+```
+
+* **State** - State should remain as '6' for closing a ticket.
+* **CloseNotes** - Providing a description of why the Incident has been closed.
+
+The JSON Object should be sent via a PUT request, as shown:
+
+```sh
+$ curl -H "Authorization: Bearer {API KEY}" PUT -d '{
+	"State" : "6",
+	"CloseNotes" : "Why are you closing the Incident?"
+}' https://servicehub-api.timico.com/incident
+```
+
+**You will not recieve a response object for this call, you will only get a HTTP/1.1 200 OK Response.**
+
+### Reopen an Incident
+
+Similar to Closing an Incident (since you make the exact same call), you just need to send a different state and no closure notes.
+
+To reopen an Incident you need to send a PUT request to the https://servicehub-api.timico.com/incident/{id} - with {id} being the identification number of the Incident.
+
+You also need to provide a request object as follows:
+
+```json
+{
+	"State" : "2"
+}
+```
+
+* **State** - State should remain as '2' for reopening a ticket.
+
+The JSON Object should be sent via a PUT request, as shown:
+
+```sh
+$ curl -H "Authorization: Bearer {API KEY}" PUT -d '{
+	"State" : "2"
+}' https://servicehub-api.timico.com/incident
+```
+
+**You will not recieve a response object for this call, you will only get a HTTP/1.1 200 OK Response.**
+
+## Get Comments
+
+Knowing the Incident identification number, you can retrieve a list of all the comments.
+
