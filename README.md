@@ -9,7 +9,7 @@ Here are a few steps to help you get started:
 * [Getting an API Key](#getting-an-API-Key)
 * [Creating an API Call](#creating-an-api-call)
     * [Authentication](#authentication)
-    * [Example Call (Getting your Company)](#example-call-(getting-your-company))
+    * [Example Call (Getting your Company)](#example-call-getting-your-company)
 * [Understanding the Response](#understanding-the-response)
     * [Successful Response](#successful-response)
     * [Other Error Responses](#other-error-responses)
