@@ -65,3 +65,97 @@ A breakdown of this response is:
 * **Category** - Which Category this Incident falls within.
 
 All other fields are more self explanatory as to what they represent.
+
+## Get Incident
+
+Retrieve information for a single Incident by sending a GET Request to https://servicehub-api.timico.com/incident/{id}
+
+```sh
+$ curl -H "Authorization: Bearer {API KEY}" GET https://servicehub-api.timico.com/incident/{id}
+```
+
+Where replacing the {id} for the Incident identification number, retrieved in the [Get Incidents](#get-incidents) endpoint example.
+
+Using the ID from above, the complete call would be:
+
+```sh
+$ curl -H "Authorization: Bearer {API KEY}" GET https://servicehub-api.timico.com/incident/98s9df8b9d9fd98gs983jk209320kjhr32
+```
+
+The expected response would be a JSON Object representing the Incident you have called.
+
+```json
+{
+    "id": "98s9df8b9d9fd98gs983jk209320kjhr32",
+    "number": "INC0000000",
+    "shortDescription": "Short Description",
+    "description": "Incident Description",
+    "priority": "3 - Moderate",
+    "state": "New",
+    "category": "Inquiry / Help",
+    "lastUpdated": null,
+    "updatedBy": "company.api.key.name",
+    "openedAt": "03/04/2019 11:21:37",
+    "active": true,
+    "createdBy": "company.api.key.name",
+    "createdOn": "2019-04-03T11:21:37",
+    "closureNotes": "",
+    "resolvedBy": "",
+    "resolvedAt": null
+}
+```
+
+A breakdown of this response is:
+
+* **ID** - The identification number for this incident (this ID would be used in future calls and is used to address a certain Incident via the API).
+* **Number** - This is the Incident reference number (this is used for referencing the Incident via the ServiceHub Web Portal and with Timico staff).
+* **Short Description** - A brief description of the Incident that has been raised.
+* **Description** - A full description of the Incident (to be aid the resolution of the Incident).
+* **Priority** - Depending on the context, an Incident is given a priority number.
+* **State** - What state is the Inciddent in, this could be 'New' or 'Closed' for example.
+* **Category** - Which Category this Incident falls within.
+
+All other fields are more self explanatory as to what they represent.
+
+## Create Incident
+
+Create an Incident for Timico staff to handle, this allows for you to complete the same process available on the ServiceHub Web Portal but via our API, so you can develop your own system to submit an Incident for you.
+
+You can create an Incident by sending a POST request to https://servicehub-api.timico.com/incident with a JSON Body.
+
+### Request Object
+
+You will need to send a JSON Object with this request, containing the follow (to complete the incident)
+
+```json
+{
+	"ShortDescription" : "Please Provide Short Description Here",
+	"Description" : "Please Provide Description Here",
+	"Impact" : "What impact is this happening?"
+}
+```
+
+The JSON object will need to be sent via a POST request, as shown:
+
+```sh
+$ curl -H "Authorization: Bearer {API KEY}" POST -d '{
+    "ShortDescription" : "Please Provide Short Description Here",
+	"Description" : "Please Provide Description Here",
+	"Impact" : "What impact is this happening?"
+}' https://servicehub-api.timico.com/incident
+```
+
+## Response Object
+
+The expected response would be a JSON Object containing the newly created Incident.
+
+```json 
+{
+    "id": "878945hfwjf8suf8sj8js8fus8uf9s8jfs0",
+    "number": "INC0000000",
+    "shortDescription": "Please Provide Short Description Here"
+}
+```
+* **ID** - The identification number for this incident (this ID would be used in future calls and is used to address a certain Incident via the API).
+* **Number** - This is the Incident reference number (this is used for referencing the Incident via the ServiceHub Web Portal and with Timico staff).
+* **Short Description** - The same as the one you sent in the POST Request
