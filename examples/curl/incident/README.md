@@ -10,12 +10,12 @@ To be able to call the ServiceHub-API you will need to ensure that you can compl
 
 Assuming you have passed the prerequisites, the follow are the possible endpoints you can call via the incident endpoint.
 
-* [Get Incidents]()
-* [Get Incident]()
-* [Create Incident]()
-* [Update Incident]()
-* [Get Comments]()
-* [Add Comment]()
+* [Get Incidents](#get-incidents)
+* [Get Incident](#get-incident)
+* [Create Incident](#create-incident)
+* [Update Incident](#update-incident)
+* [Get Comments](#get-comments)
+* [Add Comment](#add-comment)
 
 All of the calls above require an Authorization Bearer token (API Key).
 
