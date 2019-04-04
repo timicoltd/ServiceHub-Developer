@@ -13,6 +13,7 @@ Here are a few steps to help you get started:
 * [Understanding the Response]()
     * [Successful Response]()
     * [Other Error Responses]()
+* [Additional Information]()
 
 ## Getting an API Key
 
@@ -20,7 +21,7 @@ Getting an API Key is done via the ServiceHub Web Portal, found at https://porta
 
 ### Requirements
 
-* Must be a Timico Customer - [Are not a customer?]()
+* Must be a Timico Customer - [Not a customer?](https://www.timico.com)
 * Must have an account on the ServiceHub Web Portal - [Don't have an account?]()
 * Must have the 'Admin' level permissions in order to view the 'Company Settings' - [Not an Admin?]()
 
@@ -158,3 +159,30 @@ An example would be from the Company endpoint
 ```
 
 Whilst an error has occured, it's known that it can, so we have caught it and provided a better understanding as to what has happened.
+
+
+## Additional Information
+
+### Not a Customer?
+
+To use the ServiceHub API, you will need to be a customer of Timico. ServiceHub is a product which allows our customers to manage and view all aspects of a customers account. 
+
+[ServiceHub Web Portal](https://portal.timico.com) is our main product, which provides an online portal for you to view your account (or company if Admin level) as well as interact with us for support. 
+
+[ServiceHub API](https://github.com/timicoltd/ServiceHub-API) is our extended version of the Web Portal, it allows for our customers to directly call our services for their own infrastructure and software, to benefit from the collaboration of services.
+
+### Don't have an account?
+
+So you're a customer of Timico but don't have a ServiceHub Account and wish to use our [ServiceHub Web Portal](https://portal.timico.com) and our [ServiceHub API](https://github.com/timicoltd/ServiceHub-API).
+
+If you head to the [ServiceHub Web Portal](https://portal.timico.com/login) and choose Register from the Login screen, you will be able to follow the process of registering for an account.
+
+Once you have supplied your email address, and follow the link within your email, you'll be able to provide us with some information about who you are and set up your password for your account. If you are from a company which already has users with the ServiceHub Web Portal, and your company admin has setup approved domains, you will automatically be registered, otherwise you will be required to wait whilst a Timico memeber of staff can approve your request for an account and link you to tour company.
+
+### Not an Admin?
+
+So you have a Timico account but you're not an admin so cannot generate API Keys. This is easy enough to fix, if you're the developer for your company and cannot get Admin level access, then an Admin within the company can generate an API Key for you and provide it to you.
+
+If you are allowed Admin level access to ServiceHub then you may raise a ticket to us, requesting for Admin level access for the purpose of generating API Keys. This should be granted within due time so long as you meet the requirements.
+
+Once your ticket has been responded too and you are now an Admin, you should be able to generate API Keys, as outlined above.
