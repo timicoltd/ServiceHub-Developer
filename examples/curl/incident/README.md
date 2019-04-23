@@ -6,7 +6,7 @@ Timico ServiceHub REST API allows you to call the Incident endpoint to get all i
 
 ## Prerequisites
 
-To be able to call the ServiceHub REST API you will need to ensure that you can complete and call the example endpoint found in the [Getting Started](https://github.com/timicoltd/ServiceHub-Developer/) document. Calling this endpoint means that you have generated an API Key, made a basic call and understood the possible responses our API returns.
+To be able to call the ServiceHub REST API you will need to ensure that you can complete and call the example endpoint found in the [Getting Started](https://github.com/timicoltd/ServiceHub-Developer/blob/master/ServiceHub%20REST%20API%20-%20Introduction.md) document. Calling this endpoint means that you have generated an API Key, made a basic call and understood the possible responses our API returns.
 
 ## Breakdown
 
@@ -296,4 +296,4 @@ Sometimes you may not get the expected response outlined above, instead you may 
 
 Whilst this is not what we want to return to you, sometimes there is a valid reason as to why you would get one.
 
-For more a detailed breakdown of the kind of errors we may return to you, take a look at our [Other Error Responses](https://github.com/timicoltd/ServiceHub-Developer#other-error-responses) section.
+For more a detailed breakdown of the kind of errors we may return to you, take a look at our [Other Error Responses](https://github.com/timicoltd/ServiceHub-Developer/blob/master/ServiceHub%20REST%20API%20-%20Introduction.md#other-error-responses) section.
