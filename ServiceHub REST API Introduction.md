@@ -2,7 +2,7 @@
 
 Timico ServiceHub REST API requires a Timico customer account at https://portal.timico.com and a registered API Key via the ServiceHub Web Portal. Guidence for acquiring an API Key will be below.
 
-**Please note that all API calls will be made as a 'super user' - which basically means a Admin level user is created on behalf of your company and linked to your API Key(s). When any API call is made, fields such as 'Created By', 'Requested By' or 'Updated By' will be pre-populated with your API Key's user rather than a specific user from your company. A future update will bring functionality to allow these to be provided within a request object.**
+**Please note that all API calls will be made as a 'super user' - which basically means an admin level user is created on behalf of your company and linked to your API Key(s). When any API call is made, fields such as 'Created By', 'Requested By' and 'Updated By' will be pre-populated with your API Key's user rather than a specific user from your company. A future update will bring functionality to allow these to be provided within a request object (so that specific user's within your company can be assigned to an Incident for example).**
 
 ## Getting Started
 
