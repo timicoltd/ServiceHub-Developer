@@ -26,7 +26,7 @@ Currently documented and publicly accessible endpoints are:
 * [Incident](https://github.com/timicoltd/ServiceHub-Developer/blob/master/examples/curl/incident/README.md)
 * [Request](https://github.com/timicoltd/ServiceHub-Developer/blob/master/examples/curl/request/README.md)
 
-These have breakdowns of how to make all possible calls within that specified endpoint, follow the related 'read me' documentation to learn more about making calls to those endpoints.
+These have breakdowns of how to make all possible calls within that specified endpoint, follow the linked 'read me' documentation above to learn more about making calls to those endpoints.
 
 ## ServiceHub Web Hooks
 
