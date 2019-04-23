@@ -6,7 +6,7 @@ Timico ServiceHub REST API allows you to call the Request endpoint to get all re
 
 ## Prerequisites
 
-To be able to call the ServiceHub REST API you will need to ensure that you can complete and call the example endpoint found in the [Getting Started](https://github.com/timicoltd/ServiceHub-Developer/) document. Calling this endpoint means that you have generated an API Key, made a basic call and understood the possible responses our API returns.
+To be able to call the ServiceHub REST API you will need to ensure that you can complete and call the example endpoint found in the [Getting Started](https://github.com/timicoltd/ServiceHub-Developer/blob/master/ServiceHub%20REST%20API%20-%20Introduction.md) document. Calling this endpoint means that you have generated an API Key, made a basic call and understood the possible responses our API returns.
 
 ## Breakdown
 
