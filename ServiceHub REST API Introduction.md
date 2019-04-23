@@ -1,6 +1,6 @@
-# ServiceHub-API
+# ServiceHub REST API
 
-Timico ServiceHub-API requires a Timico customer account at https://portal.timico.com and a registered API Key via the ServiceHub Web Portal. Guidence for acquiring an API Key will be below.
+Timico ServiceHub REST API requires a Timico customer account at https://portal.timico.com and a registered API Key via the ServiceHub Web Portal. Guidence for acquiring an API Key will be below.
 
 ## Getting Started
 
@@ -33,7 +33,7 @@ As long as all requirements have been met, you'll be able to generate your API K
 
  2. Navigate to the 'Settings' page, under the 'Company' Menu tab (as shown in the image below).
 
-![](https://github.com/timicoltd/ServiceHub-API/blob/master/images/Company-Settings.png)
+![](https://github.com/timicoltd/ServiceHub-Developer/blob/master/images/Company-Settings.png)
 
  3. Select the 'Developer' Heading.
  
@@ -41,7 +41,7 @@ As long as all requirements have been met, you'll be able to generate your API K
  
  5. Provide the API Key name, this is for your reference only. It allows for you to refer to an API Key (as you may have many) without showing you the actual API Key.
  
- 6. Once submitted, you will be shown your API Key for you to store securely and use whilst calling ServiceHub API.
+ 6. Once submitted, you will be shown your API Key for you to store securely and use whilst calling ServiceHub REST API.
  
 _**Please note that you will only be able to see this key once and would need to regenerate the key if lost, so make a note of your API Key at this stage (and store it somewhere secure).**_
 
@@ -79,7 +79,7 @@ The expected result would be a JSON Object, containing your Company's Name (as s
 
 ## Understanding the Response
 
-Once you have made a call to the ServiceHub API, you will generally get a JSON Response however sometimes you will you just get a 200 Response (which is generally returned when you do a POST or PUT call and no data needs to be returned but confirmation that the call was successful.
+Once you have made a call to the ServiceHub REST API, you will generally get a JSON Response however sometimes you will you just get a 200 Response (which is generally returned when you do a POST or PUT call and no data needs to be returned but confirmation that the call was successful.
 
 ### Successful Response
 
@@ -165,15 +165,15 @@ Whilst an error has occured, it's known that it can, so we have caught it and pr
 
 ### Not a Customer?
 
-To use the ServiceHub API, you will need to be a customer of Timico. ServiceHub is a product which allows our customers to manage and view all aspects of a customers account. 
+To use the ServiceHub REST API, you will need to be a customer of Timico. ServiceHub is a product which allows our customers to manage and view all aspects of a customers account. 
 
 [ServiceHub Web Portal](https://portal.timico.com) is our main product, which provides an online portal for you to view your account (or company if Admin level) as well as interact with us for support. 
 
-[ServiceHub API](https://github.com/timicoltd/ServiceHub-API) is our extended version of the Web Portal, it allows for our customers to directly call our services for their own infrastructure and software, to benefit from the collaboration of services.
+[ServiceHub Developer](https://github.com/timicoltd/ServiceHub-Developer) is our extended version of the Web Portal, it allows for our customers to directly call our services for their own infrastructure and software, to benefit from the collaboration of services.
 
 ### Don't have an account?
 
-So you're a customer of Timico but don't have a ServiceHub Account and wish to use our [ServiceHub Web Portal](https://portal.timico.com) and our [ServiceHub API](https://github.com/timicoltd/ServiceHub-API).
+So you're a customer of Timico but don't have a ServiceHub Account and wish to use our [ServiceHub Web Portal](https://portal.timico.com) and our [ServiceHub Developer](https://github.com/timicoltd/ServiceHub-Developer).
 
 If you head to the [ServiceHub Web Portal](https://portal.timico.com/login) and choose Register from the Login screen, you will be able to follow the process of registering for an account.
 
