@@ -4,7 +4,7 @@ Timico ServiceHub-Developer allows for Timico customers to connect to and manage
 
 To use and benefit from the ServiceHub-Developer, we allow two methods of integration; ServiceHub REST API (where we have made specific restful endpoints for you to call) and ServiceHub Web Hooks (where you provide us the dedicated url and event you wish to be notified about).
 
-*Please note; Timico do not provide technical support other than the documentation on https://github.com/timicoltd/ServiceHub-API of how to use and integrate the ServiceHub API product.*
+*Please note; Timico do not provide technical support other than the documentation on https://github.com/timicoltd/ServiceHub-Developer of how to use and integrate the ServiceHub API product.*
 
 ## Prerequisite / Requirements
 
@@ -18,13 +18,13 @@ There are a couple of prerequisites / requirements before being able to use the 
 
 The ServiceHub REST API allows for developers to make POST, GET, PUT, DELETE requests to specifically designed endpoints, these calls will allow for the developer to retrieve, manipulate or create data for their company (based on the endpoint specified as to what data is affected).
 
-For an introduction to the ServiceHub REST API and to get started with creating your API Key, creating a mock call and understanding the responses you may get, follow the [ServiceHub REST API - Introduction](https://github.com/timicoltd/ServiceHub-API/blob/master/API-Breakdown.md)
+For an introduction to the ServiceHub REST API and to get started with creating your API Key, creating a mock call and understanding the responses you may get, follow the [ServiceHub REST API - Introduction](https://github.com/timicoltd/ServiceHub-Developer/blob/master/API-Breakdown.md)
 
 Currently documented and publicly accessible endpoints are:
 
-* [Getting your Company](https://github.com/timicoltd/ServiceHub-API/blob/master/API-Breakdown.md#example-call-getting-your-company)
-* [Incident](https://github.com/timicoltd/ServiceHub-API/blob/master/examples/curl/incident/README.md)
-* [Request](https://github.com/timicoltd/ServiceHub-API/blob/master/examples/curl/request/README.md)
+* [Getting your Company](https://github.com/timicoltd/ServiceHub-Developer/blob/master/API-Breakdown.md#example-call-getting-your-company)
+* [Incident](https://github.com/timicoltd/ServiceHub-Developer/blob/master/examples/curl/incident/README.md)
+* [Request](https://github.com/timicoltd/ServiceHub-Developer/blob/master/examples/curl/request/README.md)
 
 These have breakdowns of how to make all possible calls within that specified endpoint, follow the related 'read me' documentation to learn more about making calls to those endpoints.
 
@@ -42,11 +42,11 @@ To use the ServiceHub API, you will need to be a customer of Timico. ServiceHub 
 
 [ServiceHub Web Portal](https://portal.timico.com) is our main product, which provides an online portal for you to view your account (or company if Admin level) as well as interact with us for support. 
 
-[ServiceHub API](https://github.com/timicoltd/ServiceHub-API) is our extended version of the Web Portal, it allows for our customers to directly call our services for their own infrastructure and software, to benefit from the collaboration of services.
+[ServiceHub Developer](https://github.com/timicoltd/ServiceHub-Developer) is our extended version of the Web Portal, it allows for our customers to directly call our services for their own infrastructure and software, to benefit from the collaboration of services.
 
 ### Don't have an account?
 
-So you're a customer of Timico but don't have a ServiceHub Account and wish to use our [ServiceHub Web Portal](https://portal.timico.com) and our [ServiceHub API](https://github.com/timicoltd/ServiceHub-API).
+So you're a customer of Timico but don't have a ServiceHub Account and wish to use our [ServiceHub Web Portal](https://portal.timico.com) and our [ServiceHub Developer](https://github.com/timicoltd/ServiceHub-Developer).
 
 If you head to the [ServiceHub Web Portal](https://portal.timico.com/login) and choose Register from the Login screen, you will be able to follow the process of registering for an account.
 
