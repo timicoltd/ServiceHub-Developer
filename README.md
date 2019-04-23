@@ -6,7 +6,7 @@ To use and benefit from the ServiceHub Developer product, we allow two methods o
 
 *Please note; Timico do not provide technical support other than the documentation on the [ServiceHub Developer GitHub](https://github.com/timicoltd/ServiceHub-Developer) of how to use and integrate the ServiceHub Developer product.*
 
-## Prerequisite / Requirements
+## Prerequisites / Requirements
 
 There are a couple of prerequisites / requirements before being able to use the ServiceHub Developer product:
 
