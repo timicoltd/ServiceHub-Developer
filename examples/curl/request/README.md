@@ -219,4 +219,4 @@ Sometimes you may not get the expected response outlined above, instead you may 
 
 Whilst this is not what we want to return to you, sometimes there is a valid reason as to why you would get one.
 
-For more a detailed breakdown of the kind of errors we may return to you, take a look at our [Other Error Responses](https://github.com/timicoltd/ServiceHub-Developer#other-error-responses) section.
+For more a detailed breakdown of the kind of errors we may return to you, take a look at our [Other Error Responses](https://github.com/timicoltd/ServiceHub-Developer/blob/master/ServiceHub%20REST%20API%20-%20Introduction.md#other-error-responses) section.
