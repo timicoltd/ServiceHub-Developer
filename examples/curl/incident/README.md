@@ -1,10 +1,12 @@
-# ServiceHub-API (Incidents)
+# ServiceHub REST API (Incidents)
 
-Timico ServiceHub-API allows you to call the Incident endpoint to get all incidents for your company, more information on a specific incident, create an incident, view comments for an incident and create new comments on an incident.
+Timico ServiceHub REST API allows you to call the Incident endpoint to get all incidents for your company, more information on a specific incident, create an incident, view comments for an incident and create new comments on an incident.
+
+**Please note that all API calls will be made as a 'super user' - which basically means an admin level user is created on behalf of your company and linked to your API Key(s). When any API call is made, fields such as 'Created By', 'Requested By' and 'Updated By' will be pre-populated with your API Key's user rather than a specific user from your company. A future update will bring functionality to allow these to be provided within a request object (so that specific user's within your company can be assigned to an Incident for example).**
 
 ## Prerequisites
 
-To be able to call the ServiceHub-API you will need to ensure that you can complete and call the example endpoint found in the [Getting Started](https://github.com/timicoltd/ServiceHub-API/) document. Calling this endpoint means that you have generated an API Key, made a basic call and understood the possible responses our API returns.
+To be able to call the ServiceHub REST API you will need to ensure that you can complete and call the example endpoint found in the [Getting Started](https://github.com/timicoltd/ServiceHub-Developer/) document. Calling this endpoint means that you have generated an API Key, made a basic call and understood the possible responses our API returns.
 
 ## Breakdown
 
@@ -294,4 +296,4 @@ Sometimes you may not get the expected response outlined above, instead you may 
 
 Whilst this is not what we want to return to you, sometimes there is a valid reason as to why you would get one.
 
-For more a detailed breakdown of the kind of errors we may return to you, take a look at our [Other Error Responses](https://github.com/timicoltd/ServiceHub-API#other-error-responses) section.
+For more a detailed breakdown of the kind of errors we may return to you, take a look at our [Other Error Responses](https://github.com/timicoltd/ServiceHub-Developer#other-error-responses) section.
