@@ -4,7 +4,7 @@ Timico ServiceHub Developer allows for Timico customers to connect to and manage
 
 To use and benefit from the ServiceHub Developer product, we allow two methods of integration; ServiceHub REST API (where we have made specific restful endpoints for you to call) and ServiceHub Web Hooks (where you provide us the dedicated url and event you wish to be notified about).
 
-*Please note; Timico do not provide technical support other than the documentation on the [ServiceHub Developer GitHub](https://github.com/timicoltd/ServiceHub-Developer) of how to use and integrate the ServiceHub Developer product.*
+_**Please note; Timico do not provide technical support other than the documentation on the [ServiceHub Developer GitHub](https://github.com/timicoltd/ServiceHub-Developer) of how to use and integrate the ServiceHub Developer product.**_
 
 ## Prerequisites / Requirements
 
