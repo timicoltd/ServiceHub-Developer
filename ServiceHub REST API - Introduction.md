@@ -2,7 +2,7 @@
 
 Timico ServiceHub REST API allows for you to make HTTP POST/GET/PUT/DELETE requests to specific endpoints that we have developed in order to create, manage and delete parts of the ServiceHub package from your own integration rather than the ServiceHub Web Portal.
 
-**Please note that all API calls will be made as a 'super user' - which basically means an admin level user is created on behalf of your company and linked to your API Key(s). When any API call is made, fields such as 'Created By', 'Requested By' and 'Updated By' will be pre-populated with your API Key's user rather than a specific user from your company. A future update will bring functionality to allow these to be provided within a request object (so that specific user's within your company can be assigned to an Incident for example).**
+_**Please note that all API calls will be made as a 'super user' - which basically means an admin level user is created on behalf of your company and linked to your API Key(s). When any API call is made, fields such as 'Created By', 'Requested By' and 'Updated By' will be pre-populated with your API Key's user rather than a specific user from your company. A future update will bring functionality to allow these to be provided within a request object (so that specific user's within your company can be assigned to an Incident for example).**_
 
 ### Requirements
 
