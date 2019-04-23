@@ -18,11 +18,11 @@ There are a couple of prerequisites / requirements before being able to use the 
 
 The ServiceHub REST API allows for developers to make POST, GET, PUT, DELETE requests to specifically designed endpoints, these calls will allow for the developer to retrieve, manipulate or create data for their company (based on the endpoint specified as to what data is affected).
 
-For an introduction to the ServiceHub REST API and to get started with creating your API Key, creating a mock call and understanding the responses you may get, follow the [ServiceHub REST API - Introduction](https://github.com/timicoltd/ServiceHub-Developer/blob/master/ServiceHub%20REST%20API%20Introduction.md)
+For an introduction to the ServiceHub REST API and to get started with creating your API Key, creating a mock call and understanding the responses you may get, follow the [ServiceHub REST API - Introduction](https://github.com/timicoltd/ServiceHub-Developer/blob/master/ServiceHub%20REST%20API%20-%20Introduction.md)
 
 Currently documented and publicly accessible endpoints are:
 
-* [Getting your Company](https://github.com/timicoltd/ServiceHub-Developer/blob/master/ServiceHub%20REST%20API%20Introduction.md#example-call-getting-your-company)
+* [Getting your Company](https://github.com/timicoltd/ServiceHub-Developer/blob/master/ServiceHub%20REST%20API%20-%20Introduction.md#example-call-getting-your-company)
 * [Incident](https://github.com/timicoltd/ServiceHub-Developer/blob/master/examples/curl/incident/README.md)
 * [Request](https://github.com/timicoltd/ServiceHub-Developer/blob/master/examples/curl/request/README.md)
 
@@ -32,7 +32,7 @@ These have breakdowns of how to make all possible calls within that specified en
 
 The ServiceHub Web Hooks allows for developers to be notified upon certain events that happen with Timico. Rather than creating a polling system with our ServiceHub REST API, you will be able to retrieve a POST request on a dedicated endpoint (hosted and created by yourself) with the related data based on the event and trigger you specified.
 
-For an introduction to the ServiceHub Web Hooks and to get started with setting up your Web Hooks, follow the [ServiceHub Web Hooks - Introduction]() - **TODO**
+For an introduction to the ServiceHub Web Hooks and to get started with setting up your Web Hooks, follow the [ServiceHub Web Hooks - Introduction](https://github.com/timicoltd/ServiceHub-Developer/blob/master/ServiceHub%20Web%20Hooks%20-%20Introduction.md)
 
 ## Additional Information
 
