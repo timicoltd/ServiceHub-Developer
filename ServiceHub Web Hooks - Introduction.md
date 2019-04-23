@@ -34,14 +34,14 @@ As long as you meet all the requirements above you'll be able to configure your 
  _**Once all of the above steps have been completed, your Web Hook will be configured and ready for us to send POST requests to.**_
  
  
- An example Web Hook scenario would be:
+ ### An example Web Hook scenario would be:
  
  * Creating a Web Hook with the following:
     * Source = Incidents
     * Action = Create
     * URL = servicehub-api.timico.com/web-hooks/incident-created
     
-When an **Incident** (Source) is **created** (Action) with us at Timico, either via the [ServiceHub Web Portal](https://portal.timico.com/) or [ServiceHub REST API](https://github.com/timicoltd/ServiceHub-Developer/blob/master/examples/curl/incident/README.md#create-incident) then we would send a HTTP POST request to servicehub-api.timico.com/web-hooks/incident-created (URL), with a JSON object of the incident that has been created.
+When an **'Incident'** (Source) is **'Created'** (Action) with us at Timico, either via the [ServiceHub Web Portal](https://portal.timico.com/) or [ServiceHub REST API](https://github.com/timicoltd/ServiceHub-Developer/blob/master/examples/curl/incident/README.md#create-incident) then we would send a HTTP POST request to **'servicehub-api.timico.com/web-hooks/incident-created'** (URL), with a JSON object of the incident that has been created.
  
 
 ## Additional Information
