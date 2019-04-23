@@ -38,7 +38,7 @@ For an introduction to the ServiceHub Web Hooks and to get started with setting 
 
 ### Not a Customer?
 
-To use the ServiceHub API, you will need to be a customer of Timico. ServiceHub is a product which allows our customers to manage and view all aspects of a customers account. 
+To use ServiceHub Developer, you will need to be a customer of Timico. ServiceHub is a product which allows our customers to manage and view all aspects of a customers account. 
 
 [ServiceHub Web Portal](https://portal.timico.com) is our main product, which provides an online portal for you to view your account (or company if Admin level) as well as interact with us for support. 
 
@@ -54,8 +54,8 @@ Once you have supplied your email address, and follow the link within your email
 
 ### Not an Admin?
 
-So you have a Timico account but you're not an admin so cannot generate API Keys. This is easy enough to fix, if you're the developer for your company and cannot get Admin level access, then an Admin within the company can generate an API Key for you and provide it to you.
+So you have a Timico account but you're not an admin so cannot make use of the ServiceHub Developer functionality. This is easy enough to fix, if you're the developer for your company and cannot get Admin level access, then an Admin within the company can do those steps on your behalf.
 
-If you are allowed Admin level access to ServiceHub then you may raise a ticket to us, requesting for Admin level access for the purpose of generating API Keys. This should be granted within due time so long as you meet the requirements.
+If you are allowed Admin level access to ServiceHub then you may raise a ticket to us, requesting for Admin level access for the purpose of using the ServiceHub Developer functionality. This should be granted within due time so long as you meet the requirements.
 
-Once your ticket has been responded too and you are now an Admin, you should be able to generate API Keys, as outlined above.
+Once your ticket has been responded too and you are now an Admin, you will be able to configure everything needed for ServiceHub Developer products.
