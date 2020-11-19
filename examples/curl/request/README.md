@@ -23,10 +23,10 @@ All of the calls above require an Authorization Bearer token (API Key).
 
 ## Get Requests
 
-Retrieve all requests for your company by sending a GET Request to https://servicehub-api.timico.com/request
+Retrieve all requests for your company by sending a GET Request to https://servicehub-api-2.timico.com/request
 
 ```sh
-$ curl -H "Authorization: Bearer {API KEY}" GET https://servicehub-api.timico.com/request
+$ curl -H "Authorization: Bearer {API KEY}" GET https://servicehub-api-2.timico.com/request
 ```
 
 The expected result would be a JSON Object containing an array (called results), to which would contain a list of objects (Requests). An example response would be:
@@ -62,10 +62,10 @@ All other fields are more self explanatory as to what they represent.
 
 ## Get Request
 
-Retrieve information for a single Request by sending a GET Request to https://servicehub-api.timico.com/request/{id}
+Retrieve information for a single Request by sending a GET Request to https://servicehub-api-2.timico.com/request/{id}
 
 ```sh
-$ curl -H "Authorization: Bearer {API KEY}" GET https://servicehub-api.timico.com/request/{id}
+$ curl -H "Authorization: Bearer {API KEY}" GET https://servicehub-api-2.timico.com/request/{id}
 ```
 
 Where replacing the {id} for the Request identification number, retrieved in the [Get Requests](#get-requests) endpoint example.
@@ -73,7 +73,7 @@ Where replacing the {id} for the Request identification number, retrieved in the
 Using the ID from above, the complete call would be:
 
 ```sh
-$ curl -H "Authorization: Bearer {API KEY}" GET https://servicehub-api.timico.com/request/93984njfidjifdigna989fj9jfuua9h8
+$ curl -H "Authorization: Bearer {API KEY}" GET https://servicehub-api-2.timico.com/request/93984njfidjifdigna989fj9jfuua9h8
 ```
 
 The expected response would be a JSON Object representing the Request you have called.
@@ -104,7 +104,7 @@ All other fields are more self explanatory as to what they represent.
 
 Create a Request for Timico staff to handle, this allows for you to complete the same process available on the ServiceHub Web Portal but via our API, so you can develop your own system to submit a Request for you.
 
-You can create a Request by sending a POST request to https://servicehub-api.timico.com/request with a JSON Body.
+You can create a Request by sending a POST request to https://servicehub-api-2.timico.com/request with a JSON Body.
 
 ### Request Object
 
@@ -125,7 +125,7 @@ $ curl -H "Authorization: Bearer {API KEY}" POST -d '{
     "ShortDescription" : "Please Provide Short Description Here",
 	"Description" : "Please Provide Description Here",
 	"Impact" : "What impact is this happening?"
-}' https://servicehub-api.timico.com/request
+}' https://servicehub-api-2.timico.com/request
 ```
 
 ### Response Object
@@ -148,10 +148,10 @@ The expected response would be a JSON Object containing the newly created Call (
 
 Knowing the Request identification number, you can retrieve a list of all the comments.
 
-To get comments for a specific request you need to send a GET request to https://servicehub-api.timico.com/request/{id}/comments - with {id} being the identification number of the Request.
+To get comments for a specific request you need to send a GET request to https://servicehub-api-2.timico.com/request/{id}/comments - with {id} being the identification number of the Request.
 
 ```sh
-$ curl -H "Authorization: Bearer {API KEY}" GET https://servicehub-api.timico.com/request/93984njfidjifdigna989fj9jfuua9h8/comments
+$ curl -H "Authorization: Bearer {API KEY}" GET https://servicehub-api-2.timico.com/request/93984njfidjifdigna989fj9jfuua9h8/comments
 ```
 
 The expected response would be a JSON Object, containg an Array of a Comment Container, a comment container would contain the group name (representing the date of the comment, for when multiple comments are made on the same date) and another array of comments (Comment Object's).
@@ -193,7 +193,7 @@ All other fields are more self explanatory as to what they represent, though Bod
 
 Knowing the Request identification number, you can add a comment to the request.
 
-To add a comment to a specific request you need to send a POST request to https://servicehub-api.timico.com/request/{id}/comment - with {id} being the identification number of the Request.
+To add a comment to a specific request you need to send a POST request to https://servicehub-api-2.timico.com/request/{id}/comment - with {id} being the identification number of the Request.
 
 You will need to send a JSON Object with this request, containing the following:
 
@@ -208,7 +208,7 @@ The JSON object will need to be sent via a POST request, as shown:
 ```sh
 $ curl -H "Authorization: Bearer {API KEY}" POST -d '{
     "Comments" : "Testing Comments from ServiceHub Customer API"
-}' https://servicehub-api.timico.com/request/98s9df8b9d9fd98gs983jk209320kjhr32/comment
+}' https://servicehub-api-2.timico.com/request/98s9df8b9d9fd98gs983jk209320kjhr32/comment
 ```
 
 **You will not recieve a response object for this call, you will only get a HTTP/1.1 200 OK Response.**
