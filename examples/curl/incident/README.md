@@ -144,7 +144,7 @@ $ curl -H "Authorization: Bearer {API KEY}" POST -d '{
     "ShortDescription" : "Please Provide Short Description Here",
 	"Description" : "Please Provide Description Here",
 	"Impact" : "What impact is this happening?"
-}' https://servicehub-api.timico.com/incident
+}' https://servicehub-api-2.timico.com/incident
 ```
 
 ### Response Object
