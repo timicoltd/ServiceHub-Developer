@@ -23,10 +23,10 @@ All of the calls above require an Authorization Bearer token (API Key).
 
 ## Get Incidents
 
-Retrieve all incidents for your company by sending a GET Request to https://servicehub-api.timico.com/incident
+Retrieve all incidents for your company by sending a GET Request to https://servicehub-api-2.timico.com/incident
 
 ```sh
-$ curl -H "Authorization: Bearer {API KEY}" GET https://servicehub-api.timico.com/incident
+$ curl -H "Authorization: Bearer {API KEY}" GET https://servicehub-api-2.timico.com/incident
 ```
 
 The expected result would be a JSON Object containing an array (called results), to which would contain a list of objects (Incidents). An example response would be:
@@ -70,10 +70,10 @@ All other fields are more self explanatory as to what they represent.
 
 ## Get Incident
 
-Retrieve information for a single Incident by sending a GET Request to https://servicehub-api.timico.com/incident/{id}
+Retrieve information for a single Incident by sending a GET Request to https://servicehub-api-2.timico.com/incident/{id}
 
 ```sh
-$ curl -H "Authorization: Bearer {API KEY}" GET https://servicehub-api.timico.com/incident/{id}
+$ curl -H "Authorization: Bearer {API KEY}" GET https://servicehub-api-2.timico.com/incident/{id}
 ```
 
 Where replacing the {id} for the Incident identification number, retrieved in the [Get Incidents](#get-incidents) endpoint example.
@@ -81,7 +81,7 @@ Where replacing the {id} for the Incident identification number, retrieved in th
 Using the ID from above, the complete call would be:
 
 ```sh
-$ curl -H "Authorization: Bearer {API KEY}" GET https://servicehub-api.timico.com/incident/98s9df8b9d9fd98gs983jk209320kjhr32
+$ curl -H "Authorization: Bearer {API KEY}" GET https://servicehub-api-2.timico.com/incident/98s9df8b9d9fd98gs983jk209320kjhr32
 ```
 
 The expected response would be a JSON Object representing the Incident you have called.
@@ -123,7 +123,7 @@ All other fields are more self explanatory as to what they represent.
 
 Create an Incident for Timico staff to handle, this allows for you to complete the same process available on the ServiceHub Web Portal but via our API, so you can develop your own system to submit an Incident for you.
 
-You can create an Incident by sending a POST request to https://servicehub-api.timico.com/incident with a JSON Body.
+You can create an Incident by sending a POST request to https://servicehub-api-2.timico.com/incident with a JSON Body.
 
 ### Request Object
 
@@ -166,11 +166,11 @@ The expected response would be a JSON Object containing the newly created Incide
 
 Whilst you cannot update information on an Incident, our view of updating an Incident is to Open/Close the Incident.
 
-You can update an Incident by sending a PUT request to https://servicehub-api.timico.com/incident/{id} with a Update Incident JSON Object.
+You can update an Incident by sending a PUT request to https://servicehub-api-2.timico.com/incident/{id} with a Update Incident JSON Object.
 
 ### Close an Incident
 
-To close an Incident you need to send a PUT request to https://servicehub-api.timico.com/incident/{id} - with {id} being the identification number of the Incident.
+To close an Incident you need to send a PUT request to https://servicehub-api-2.timico.com/incident/{id} - with {id} being the identification number of the Incident.
 
 You also need to provide a request object as follows:
 
@@ -190,7 +190,7 @@ The JSON Object should be sent via a PUT request, as shown:
 $ curl -H "Authorization: Bearer {API KEY}" PUT -d '{
 	"State" : "6",
 	"CloseNotes" : "Why are you closing the Incident?"
-}' https://servicehub-api.timico.com/incident/98s9df8b9d9fd98gs983jk209320kjhr32
+}' https://servicehub-api-2.timico.com/incident/98s9df8b9d9fd98gs983jk209320kjhr32
 ```
 
 **You will not recieve a response object for this call, you will only get a HTTP/1.1 200 OK Response.**
@@ -199,7 +199,7 @@ $ curl -H "Authorization: Bearer {API KEY}" PUT -d '{
 
 Similar to Closing an Incident (since you make the exact same call), you just need to send a different state and no closure notes.
 
-To reopen an Incident you need to send a PUT request to https://servicehub-api.timico.com/incident/{id} - with {id} being the identification number of the Incident.
+To reopen an Incident you need to send a PUT request to https://servicehub-api-2.timico.com/incident/{id} - with {id} being the identification number of the Incident.
 
 You also need to provide a request object as follows:
 
@@ -216,7 +216,7 @@ The JSON Object should be sent via a PUT request, as shown:
 ```sh
 $ curl -H "Authorization: Bearer {API KEY}" PUT -d '{
 	"State" : "2"
-}' https://servicehub-api.timico.com/incident/98s9df8b9d9fd98gs983jk209320kjhr32
+}' https://servicehub-api-2.timico.com/incident/98s9df8b9d9fd98gs983jk209320kjhr32
 ```
 
 **You will not recieve a response object for this call, you will only get a HTTP/1.1 200 OK Response.**
@@ -225,10 +225,10 @@ $ curl -H "Authorization: Bearer {API KEY}" PUT -d '{
 
 Knowing the Incident identification number, you can retrieve a list of all the comments.
 
-To get comments for a specific incident you need to send a GET request to https://servicehub-api.timico.com/incident/{id}/comments - with {id} being the identification number of the Incident.
+To get comments for a specific incident you need to send a GET request to https://servicehub-api-2.timico.com/incident/{id}/comments - with {id} being the identification number of the Incident.
 
 ```sh
-$ curl -H "Authorization: Bearer {API KEY}" GET https://servicehub-api.timico.com/incident/98s9df8b9d9fd98gs983jk209320kjhr32/comments
+$ curl -H "Authorization: Bearer {API KEY}" GET https://servicehub-api-2.timico.com/incident/98s9df8b9d9fd98gs983jk209320kjhr32/comments
 ```
 
 The expected response would be a JSON Object, containg an Array of a Comment Container, a comment container would contain the group name (representing the date of the comment, for when multiple comments are made on the same date) and another array of comments (Comment Object's).
@@ -270,7 +270,7 @@ All other fields are more self explanatory as to what they represent, though Bod
 
 Knowing the Incident identification number, you can add a comment to the incident.
 
-To add a comment to a specific incident you need to send a POST request to https://servicehub-api.timico.com/incident/{id}/comment - with {id} being the identification number of the Incident.
+To add a comment to a specific incident you need to send a POST request to https://servicehub-api-2.timico.com/incident/{id}/comment - with {id} being the identification number of the Incident.
 
 You will need to send a JSON Object with this request, containing the following:
 
@@ -285,7 +285,7 @@ The JSON object will need to be sent via a POST request, as shown:
 ```sh
 $ curl -H "Authorization: Bearer {API KEY}" POST -d '{
     "Comments" : "Testing Comments from ServiceHub Customer API"
-}' https://servicehub-api.timico.com/incident/98s9df8b9d9fd98gs983jk209320kjhr32/comment
+}' https://servicehub-api-2.timico.com/incident/98s9df8b9d9fd98gs983jk209320kjhr32/comment
 ```
 
 **You will not recieve a response object for this call, you will only get a HTTP/1.1 200 OK Response.**
