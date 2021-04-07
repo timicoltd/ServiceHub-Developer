@@ -1,6 +1,6 @@
 # ServiceHub REST API (Assignment Groups)
 
-Timico ServiceHub REST API allows you to call the Asssignment groups endpoint to get all assignment groups for your company.
+Timico ServiceHub REST API allows you to call the Assignment groups endpoint to get all assignment groups for your company.
 
 **Please note that all API calls will be made as a 'super user' - which basically means an admin level user is created on behalf of your company and linked to your API Key(s). When any API call is made, fields such as 'Created By', 'Requested By' and 'Updated By' will be pre-populated with your API Key's user rather than a specific user from your company. A future update will bring functionality to allow these to be provided within a request object (so that specific user's within your company can be assigned to an Incident for example).**
 
