@@ -327,7 +327,7 @@ $ curl -H "Authorization: Bearer {API KEY}" POST -d '{
 	]
 }' https://servicehub-api-2.timico.com/incident/98s9df8b9d9fd98gs983jk209320kjhr32/attachment
 ```
-
+**The maximum size limit for a file is 2MB.** 
 
 **You will not recieve a response object for this call, you will only get a HTTP/1.1 200 OK Response.**
 
