@@ -133,7 +133,9 @@ You will need to send a JSON Object with this request, containing the follow (to
 {
 	"ShortDescription" : "Please Provide Short Description Here",
 	"Description" : "Please Provide Description Here",
-	"Impact" : "What impact is this happening?"
+	"Impact" : "What impact is this happening?",
+	"AssignmentGroup": "Assignment Group Identification number",
+	"CmdbCi": "Configuration Item Identification number"
 }
 ```
 
@@ -141,9 +143,11 @@ The JSON object will need to be sent via a POST request, as shown:
 
 ```sh
 $ curl -H "Authorization: Bearer {API KEY}" POST -d '{
-    "ShortDescription" : "Please Provide Short Description Here",
+    	"ShortDescription" : "Please Provide Short Description Here",
 	"Description" : "Please Provide Description Here",
-	"Impact" : "What impact is this happening?"
+	"Impact" : "What impact is this happening?",
+	"AssignmentGroup": "Assignment Group Identification number",
+	"CmdbCi": "Configuration Item Identification number"
 }' https://servicehub-api-2.timico.com/incident
 ```
 
@@ -287,6 +291,43 @@ $ curl -H "Authorization: Bearer {API KEY}" POST -d '{
     "Comments" : "Testing Comments from ServiceHub Customer API"
 }' https://servicehub-api-2.timico.com/incident/98s9df8b9d9fd98gs983jk209320kjhr32/comment
 ```
+
+## Add Attachment
+
+Knowing the Incident identification number, you can attach files to the incident.
+
+To attach files to a specific incident you need to send a POST request to https://servicehub-api-2.timico.com/incident/{id}/attachment - with {id} being the identification number of the Incident.
+
+You will need to send a JSON Object with this request, containing the following:
+
+```json
+{
+	"Files" : 
+	[
+		{
+			"Base64Encoding" : "The file encoded in a base64 string",
+			"Name" : "Name of the file",
+			"ContentType" : "Content type"
+		}
+	]
+}
+```
+
+The JSON object will need to be sent via a POST request, as shown:
+
+```sh
+$ curl -H "Authorization: Bearer {API KEY}" POST -d '{
+    "Files" : 
+	[
+		{
+			"Base64Encoding" : "The file encoded in a base64 string",
+			"Name" : "Name of the file",
+			"ContentType" : "Content type"
+		}
+	]
+}' https://servicehub-api-2.timico.com/incident/98s9df8b9d9fd98gs983jk209320kjhr32/attachment
+```
+
 
 **You will not recieve a response object for this call, you will only get a HTTP/1.1 200 OK Response.**
 
