@@ -18,6 +18,7 @@ Assuming you have passed the prerequisites, the follow are the possible endpoint
 * [Update Incident](#update-incident)
 * [Get Comments](#get-comments)
 * [Add Comment](#add-comment)
+* [Add Attachment](#add-attachment)
 
 All of the calls above require an Authorization Bearer token (API Key).
 
