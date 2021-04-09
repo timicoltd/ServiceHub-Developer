@@ -14,10 +14,14 @@ Assuming you have passed the prerequisites, the follow are the possible endpoint
 
 * [Get Requests](#get-requests)
 * [Get Request](#get-request)
+* [Get Catalog Items](#get-catalog-items)
+* [Get Catalog Item Variables](#get-catalog-item-variables)
 * [Create Request](#create-request)
+* [Create Call](#create-call)
 * [Update Request](#update-request)
 * [Get Comments](#get-comments)
 * [Add Comment](#add-comment)
+* [Add Attachment](#add-attachment)
 
 All of the calls above require an Authorization Bearer token (API Key).
 
@@ -100,13 +104,125 @@ The expected response would be a JSON Object representing the Request you have c
 
 All other fields are more self explanatory as to what they represent.
 
+## Get Catalog Items
+
+Retrieve all catalog items for your company by sending a GET Request to https://servicehub-api-2.timico.com/request/catalog-item
+
+```sh
+$ curl -H "Authorization: Bearer {API KEY}" GET https://servicehub-api-2.timico.com/request/catalog-item
+```
+
+The expected result would be a JSON Object containing an array, to which would contain a list of objects (catalog items). An example response would be:
+
+```json
+[
+	{
+		"SysId" : "83bd55a1dbecf78000a3f9971d96190b",
+		"Name" : "Test Catalog item",
+		"Description" : "Test Description"
+	}
+]
+```
+
+A breakdown of this response is:
+
+* **SysId** - The identification number for this catalog item (this ID would be used in future calls and is used to address a certain catalog item via the API).
+* **Name** - The name of this catalog item.
+* **Description** - A full description of the catalog item.
+
+## Get Catalog Item Variables
+
+Retrieve all catalog item variables for a single catalog item by sending a POST Request to https://servicehub-api-2.timico.com/request/catalog-item-variables/{id}
+
+```sh
+$ curl -H "Authorization: Bearer {API KEY}" POST https://servicehub-api-2.timico.com/catalog-item-variables/{id}
+```
+
+Where replacing the {id} for the Catalog item identification number, retrieved in the [Get Catalog Items](#get-catalog-items) endpoint example.
+
+Using the ID from above, the complete call would be:
+
+```sh
+$ curl -H "Authorization: Bearer {API KEY}" POST https://servicehub-api-2.timico.com/catalog-item-variables/98s9df8b9d9fd98gs983jk209320kjhr32
+```
+
+The expected result would be a JSON Object containing an array, to which would contain a list of objects (variables). An example response would be:
+```json
+[
+	{
+		"Name" : "u_test",
+		"Type" : "dropdown",
+		"QuestionText" : "This is a test variable"
+	}
+]
+```
+
+A breakdown of this response is:
+
+* **Name** - The internal name of the variable. (to be used as reference when creating a request).
+* **Type** - Variable type. 
+* **QuestionText** - The display name of the variable. 
+
+
 ## Create Request
 
 Create a Request for Timico staff to handle, this allows for you to complete the same process available on the ServiceHub Web Portal but via our API, so you can develop your own system to submit a Request for you.
 
+You can create a Request by sending a POST request to https://servicehub-api-2.timico.com/request/{id} with a JSON Body.
+
+Where replacing the {id} for the Catalog item identification number, retrieved in the [Get Catalog Items](#get-catalog-items) endpoint example.
+
+You will need to send a JSON Object with this request, containing the following:
+
+```json
+{
+	"Variables" : 
+	[
+		{
+			"Name" : "Variable name",
+			"Value" : "Variable value",
+		}
+	]
+}
+```
+
+The JSON object will need to be sent via a POST request, as shown:
+
+```sh
+$ curl -H "Authorization: Bearer {API KEY}" POST -d '{
+    "Variables" : 
+	[
+		{
+			"Name" : "Variable name",
+			"Value" : "Variable value",
+		}
+	]
+}' https://servicehub-api-2.timico.com/request/98s9df8b9d9fd98gs983jk209320kjhr32
+```
+### Response Object
+
+The expected response would be a JSON Object containing the newly created Request.
+
+```json 
+{
+    "id": "878945hfwjf8suf8sj8js8fus8uf9s8jfs0",
+    "number": "REQ0000000",
+}
+```
+
+* **ID** - The identification number for this Request.
+* **Number** - This is the Request reference number.
+
+
+
+
+## Create Call
+
+Create a Call request for Timico staff to handle, this allows for you to complete the same process available on the ServiceHub Web Portal but via our API, so you can develop your own system to submit a Call request for you.
+
 You can create a Request by sending a POST request to https://servicehub-api-2.timico.com/request with a JSON Body.
 
-### Request Object
+### Call Object
 
 You will need to send a JSON Object with this request, containing the follow:
 
@@ -122,7 +238,7 @@ The JSON object will need to be sent via a POST request, as shown:
 
 ```sh
 $ curl -H "Authorization: Bearer {API KEY}" POST -d '{
-    "ShortDescription" : "Please Provide Short Description Here",
+    	"ShortDescription" : "Please Provide Short Description Here",
 	"Description" : "Please Provide Description Here",
 	"Impact" : "What impact is this happening?"
 }' https://servicehub-api-2.timico.com/request
@@ -210,6 +326,43 @@ $ curl -H "Authorization: Bearer {API KEY}" POST -d '{
     "Comments" : "Testing Comments from ServiceHub Customer API"
 }' https://servicehub-api-2.timico.com/request/98s9df8b9d9fd98gs983jk209320kjhr32/comment
 ```
+
+## Add Attachment
+
+Knowing the Request item identification number, you can attach files to the request item.
+
+To attach files to a specific request item you need to send a POST request to https://servicehub-api-2.timico.com/request/{id}/attachment - with {id} being the identification number of the request item.
+
+You will need to send a JSON Object with this request, containing the following:
+
+```json
+{
+	"Files" : 
+	[
+		{
+			"Base64Encoding" : "The file encoded in a base64 string",
+			"Name" : "Name of the file",
+			"ContentType" : "Content type"
+		}
+	]
+}
+```
+
+The JSON object will need to be sent via a POST request, as shown:
+
+```sh
+$ curl -H "Authorization: Bearer {API KEY}" POST -d '{
+    "Files" : 
+	[
+		{
+			"Base64Encoding" : "The file encoded in a base64 string",
+			"Name" : "Name of the file",
+			"ContentType" : "Content type"
+		}
+	]
+}' https://servicehub-api-2.timico.com/request/98s9df8b9d9fd98gs983jk209320kjhr32/attachment
+```
+**The maximum size limit for a file is 2MB.** 
 
 **You will not recieve a response object for this call, you will only get a HTTP/1.1 200 OK Response.**
 
