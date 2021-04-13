@@ -17,7 +17,7 @@ Assuming you have passed the prerequisites, the follow are the possible endpoint
 Retrieve all configuration items for your company by sending a POST Request to https://servicehub-api-2.timico.com/cmdb
 
 ```sh
-$ curl -H "Authorization: Bearer {API KEY}" GET https://servicehub-api-2.timico.com/cmdb
+$ curl -H "Authorization: Bearer {API KEY}" POST https://servicehub-api-2.timico.com/cmdb
 ```
 The expected result would be a JSON Object containing an array , to which would contain a list of objects (configuration items). An example response would be:
 
