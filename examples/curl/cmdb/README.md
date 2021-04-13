@@ -16,9 +16,42 @@ Assuming you have passed the prerequisites, the follow are the possible endpoint
 
 Retrieve all configuration items for your company by sending a POST Request to https://servicehub-api-2.timico.com/cmdb
 
-```sh
-$ curl -H "Authorization: Bearer {API KEY}" POST https://servicehub-api-2.timico.com/cmdb
+You will need to send a JSON Object with this request, containing the following:
+```json
+{
+    "Pagination":"true",
+    "CurrentPage":"0",
+    "Amount":"5",
+    "Filter":[
+        {
+            "Column":"installStatus",
+            "Value":["=Installed"]
+        }
+     ]
+}
 ```
+A breakdown of this request is:
+
+* **Pagination** - Support for pagination. Default value is true.
+* **CurrentPage** - Current page value. Default value is 0.
+* **Amount** - Amount of records returned. Default value is 5.
+* **Filter** - Array of filter objects, where _Column_ is the name of the property to filter by, and _Value_ is a string array containing the filter query. 
+
+The JSON object will need to be sent via a POST request, as shown:
+```sh
+$ curl -H "Authorization: Bearer {API KEY}" POST -d '{
+    "Pagination":"true",
+    "CurrentPage":"0",
+    "Amount":"5",
+    "Filter":[
+        {
+            "Column":"installStatus",
+            "Value":["=Installed"]
+        }
+     ]
+}' https://servicehub-api-2.timico.com/cmdb
+```
+
 The expected result would be a JSON Object containing an array , to which would contain a list of objects (configuration items). An example response would be:
 
 ```json
