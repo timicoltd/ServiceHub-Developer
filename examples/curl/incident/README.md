@@ -51,7 +51,8 @@ The expected result would be a JSON Object containing an array (called results),
             "createdOn": "2019-04-03T11:21:37",
             "closureNotes": "",
             "resolvedBy": "",
-            "resolvedAt": null
+            "resolvedAt": null,
+	    "uexternalreferencenumber":""
         }
     ]
 }
@@ -104,7 +105,8 @@ The expected response would be a JSON Object representing the Incident you have 
     "createdOn": "2019-04-03T11:21:37",
     "closureNotes": "",
     "resolvedBy": "",
-    "resolvedAt": null
+    "resolvedAt": null,
+    "externalreferencenumber":""
 }
 ```
 
@@ -135,8 +137,9 @@ You will need to send a JSON Object with this request, containing the follow (to
 	"ShortDescription" : "Please Provide Short Description Here",
 	"Description" : "Please Provide Description Here",
 	"Impact" : "What impact is this happening?",
-	"AssignmentGroup": "Assignment Group Identification number",
-	"CmdbCi": "Configuration Item Identification number"
+	"AssignmentGroup" : "Assignment Group Identification number",
+	"CmdbCi" : "Configuration Item Identification number",
+	"UExternalReferenceNumber" : "External Reference Number"
 }
 ```
 
@@ -148,7 +151,8 @@ $ curl -H "Authorization: Bearer {API KEY}" POST -d '{
 	"Description" : "Please Provide Description Here",
 	"Impact" : "What impact is this happening?",
 	"AssignmentGroup": "Assignment Group Identification number",
-	"CmdbCi": "Configuration Item Identification number"
+	"CmdbCi": "Configuration Item Identification number",
+	"UExternalReferenceNumber" : "External Reference Number"
 }' https://servicehub-api-2.timico.com/incident
 ```
 
