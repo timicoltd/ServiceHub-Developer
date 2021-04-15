@@ -230,6 +230,48 @@ $ curl -H "Authorization: Bearer {API KEY}" PUT -d '{
 
 **You will not recieve a response object for this call, you will only get a HTTP/1.1 200 OK Response.**
 
+### Update Assignment Group 
+
+To update the assignment group on an Incident you need to send a PUT request to https://servicehub-api-2.timico.com/incident/{id} - with {id} being the identification number of the Incident.
+
+You also need to provide a request object as follows:
+
+```json
+{
+	"AsignmentGroup" : "Assignment Group Identification number",
+}
+```
+The JSON Object should be sent via a PUT request, as shown:
+
+```sh
+$ curl -H "Authorization: Bearer {API KEY}" PUT -d '{
+	"AsignmentGroup" : "Assignment Group Identification number",
+}' https://servicehub-api-2.timico.com/incident/98s9df8b9d9fd98gs983jk209320kjhr32
+```
+
+**You will not recieve a response object for this call, you will only get a HTTP/1.1 200 OK Response.**
+
+### Update Configuration Item
+
+To update the Configuration Item on an Incident you need to send a PUT request to https://servicehub-api-2.timico.com/incident/{id} - with {id} being the identification number of the Incident.
+
+You also need to provide a request object as follows:
+
+```json
+{
+	"CmdbCi" : "Configuration Item Identification number",
+}
+```
+The JSON Object should be sent via a PUT request, as shown:
+
+```sh
+$ curl -H "Authorization: Bearer {API KEY}" PUT -d '{
+	"CmdbCi" : "Configuration Item Identification number",
+}' https://servicehub-api-2.timico.com/incident/98s9df8b9d9fd98gs983jk209320kjhr32
+```
+
+**You will not recieve a response object for this call, you will only get a HTTP/1.1 200 OK Response.**
+
 ## Get Comments
 
 Knowing the Incident identification number, you can retrieve a list of all the comments.
