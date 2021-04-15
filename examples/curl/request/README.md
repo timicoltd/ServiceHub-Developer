@@ -18,7 +18,7 @@ Assuming you have passed the prerequisites, the follow are the possible endpoint
 * [Get Catalog Item Variables](#get-catalog-item-variables)
 * [Create Request](#create-request)
 * [Create Call](#create-call)
-* [Update Request](#update-request)
+* [Update Request Item](#update-request-item)
 * [Get Comments](#get-comments)
 * [Add Comment](#add-comment)
 * [Add Attachment](#add-attachment)
@@ -259,6 +259,83 @@ The expected response would be a JSON Object containing the newly created Call (
 * **ID** - The identification number for this call (this ID would be used in future calls and is used to address a certain calls via the API).
 * **Number** - This is the Call's reference number (this is used for referencing the call via the ServiceHub Web Portal and with Timico staff).
 * **Short Description** - The same as the one you sent in the POST Request
+
+## Update Request Item
+
+You can update a Request item by sending a PUT request to https://servicehub-api-2.timico.com/request/{id} with a Update Request Item JSON Object.
+
+### Close a Request Item
+
+To close a Request Item you need to send a PUT request to https://servicehub-api-2.timico.com/request/{id} - with {id} being the identification number of the Request Item.
+
+You also need to provide a request object as follows:
+
+```json
+{
+	"State" : "3",
+	"CloseNotes" : "Why are you closing the Request Item?"
+}
+```
+
+* **State** - State should remain as '3' for closing a request item.
+* **CloseNotes** - Providing a description of why the Request Item has been closed.
+
+The JSON Object should be sent via a PUT request, as shown:
+
+```sh
+$ curl -H "Authorization: Bearer {API KEY}" PUT -d '{
+	"State" : "3",
+	"CloseNotes" : "Why are you closing the Request Item?"
+}' https://servicehub-api-2.timico.com/request/98s9df8b9d9fd98gs983jk209320kjhr32
+```
+**You will not recieve a response object for this call, you will only get a HTTP/1.1 200 OK Response.**
+
+### Reopen a Request Item
+
+Similar to Closing a Request Item (since you make the exact same call), you just need to send a different state and no closure notes.
+
+To reopen a Request Item you need to send a PUT request to https://servicehub-api-2.timico.com/request/{id} - with {id} being the identification number of the Request Item.
+
+You also need to provide a request object as follows:
+
+```json
+{
+	"State" : "2"
+}
+```
+
+* **State** - State should remain as '2' for reopening a request item.
+
+The JSON Object should be sent via a PUT request, as shown:
+
+```sh
+$ curl -H "Authorization: Bearer {API KEY}" PUT -d '{
+	"State" : "2"
+}' https://servicehub-api-2.timico.com/request/98s9df8b9d9fd98gs983jk209320kjhr32
+```
+
+**You will not recieve a response object for this call, you will only get a HTTP/1.1 200 OK Response.**
+
+### Update Assignment Group 
+
+To update the assignment group on a request item you need to send a PUT request to https://servicehub-api-2.timico.com/request/{id} - with {id} being the identification number of the Request Item.
+
+You also need to provide a request object as follows:
+
+```json
+{
+	"AsignmentGroup" : "Assignment Group Identification number",
+}
+```
+The JSON Object should be sent via a PUT request, as shown:
+
+```sh
+$ curl -H "Authorization: Bearer {API KEY}" PUT -d '{
+	"AsignmentGroup" : "Assignment Group Identification number",
+}' https://servicehub-api-2.timico.com/request/98s9df8b9d9fd98gs983jk209320kjhr32
+```
+
+**You will not recieve a response object for this call, you will only get a HTTP/1.1 200 OK Response.**
 
 ## Get Comments
 
