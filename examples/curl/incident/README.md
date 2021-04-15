@@ -378,6 +378,46 @@ $ curl -H "Authorization: Bearer {API KEY}" POST -d '{
 
 **You will not recieve a response object for this call, you will only get a HTTP/1.1 200 OK Response.**
 
+## Add Attachment and Comments (on the same payload)
+
+Knowing the Incident identification number, you can attach files as well as adding comments to the incident on the same payload.
+
+In order to do that you need to send a POST request to https://servicehub-api-2.timico.com/incident/{id}/attachment-comment - with {id} being the identification number of the Incident.
+
+You will need to send a JSON Object with this request, containing the following:
+```json
+{
+	"Files" : 
+	[
+		{
+			"Base64Encoding" : "The file encoded in a base64 string",
+			"Name" : "Name of the file",
+			"ContentType" : "Content type"
+		}
+	],
+	"Comment" : "Test Comment"
+}
+```
+
+The JSON object will need to be sent via a POST request, as shown:
+
+```sh
+$ curl -H "Authorization: Bearer {API KEY}" POST -d '{
+    "Files" : 
+	[
+		{
+			"Base64Encoding" : "The file encoded in a base64 string",
+			"Name" : "Name of the file",
+			"ContentType" : "Content type"
+		}
+	],
+	"Comment" : "Test Comment"
+}' https://servicehub-api-2.timico.com/incident/98s9df8b9d9fd98gs983jk209320kjhr32/attachment-comment
+```
+**The maximum size limit for a file is 2MB.** 
+
+**You will not recieve a response object for this call, you will only get a HTTP/1.1 200 OK Response.**
+
 ## Response Errors
 
 Sometimes you may not get the expected response outlined above, instead you may get an error!
