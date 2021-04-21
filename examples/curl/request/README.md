@@ -152,7 +152,8 @@ The expected result would be a JSON Object containing an array, to which would c
 	{
 		"Name" : "u_test",
 		"Type" : "dropdown",
-		"QuestionText" : "This is a test variable"
+		"QuestionText" : "This is a test variable",
+		"Mandatory" : "true"
 	}
 ]
 ```
@@ -162,6 +163,7 @@ A breakdown of this response is:
 * **Name** - The internal name of the variable. (to be used as reference when creating a request).
 * **Type** - Variable type. 
 * **QuestionText** - The display name of the variable. 
+* **Mandatory** - Variable is mandatory when creating the request.
 
 
 ## Create Request
@@ -205,15 +207,17 @@ The expected response would be a JSON Object containing the newly created Reques
 
 ```json 
 {
-    "id": "878945hfwjf8suf8sj8js8fus8uf9s8jfs0",
-    "number": "REQ0000000",
+    "RequestId": "878945hfwjf8suf8sj8js8fus8uf9s8jfs0",
+    "RequestNumber" : "REQ0000000",
+    "RequestItemId" : "12331224asjgdss8js8fus8uf9s833fgsd"
+    "RequestItemNumber : "RITM0300002"
 }
 ```
 
-* **ID** - The identification number for this Request.
-* **Number** - This is the Request reference number.
-
-
+* **RequestId** - The identification number for this Request.
+* **RequestNumber** - This is the Request reference number.
+* **RequestItemId** - The identification number for the Request Item.
+* **RequestItemNumber** - The Request Item reference number.
 
 
 ## Create Call
