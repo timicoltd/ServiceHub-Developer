@@ -60,7 +60,7 @@ A breakdown of this response is:
 * **Request Number** - This is the Request reference number (this is used for referencing the Request via the ServiceHub Web Portal and with Timico staff).
 * **Short Description** - A brief description of the Request that has been raised.
 * **Description** - A full description of the Request.
-* **State** - What state is the Inciddent in, this could be 'New' or 'Closed' for example.
+* **State** - What state is the request in, this could be 'New' or 'Closed' for example.
 
 All other fields are more self explanatory as to what they represent.
 
