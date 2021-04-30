@@ -135,7 +135,7 @@ A breakdown of this response is:
 Retrieve all catalog item variables for a single catalog item by sending a POST Request to https://servicehub-api-2.timico.com/request/catalog-item-variables/{id}
 
 ```sh
-$ curl -H "Authorization: Bearer {API KEY}" POST https://servicehub-api-2.timico.com/catalog-item-variables/{id}
+$ curl -H "Authorization: Bearer {API KEY}" POST https://servicehub-api-2.timico.com/request/catalog-item-variables/{id}
 ```
 
 Where replacing the {id} for the Catalog item identification number, retrieved in the [Get Catalog Items](#get-catalog-items) endpoint example.
