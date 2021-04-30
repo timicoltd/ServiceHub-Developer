@@ -14,6 +14,7 @@ Assuming you have passed the prerequisites, the follow are the possible endpoint
 
 * [Get Configuration Items](#get-configuration-items)
 
+## Get Configuration Items
 Retrieve all configuration items for your company by sending a POST Request to https://servicehub-api-2.timico.com/cmdb
 
 You will need to send a JSON Object with this request, containing the following:
