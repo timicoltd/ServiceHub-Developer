@@ -57,24 +57,24 @@ All API calls need to be authenticated by your API Key as a Bearer Token.
 To do so, you need to add the Authorization header to your request, with the value as **'Bearer {APIKEY}'** - Replacing {APIKEY} with your API Key from earlier.
 
 ```sh
-$ curl -H "Authorization: Bearer {API KEY}" https://servicehub-api.timico.com/
+$ curl -H "Authorization: Bearer {API KEY}" https://servicehub-api.digitalspace.co.uk/
 ```
 
 ### Example Call (Getting your Company)
 
 We've made a simple testing endpoint that returns back the company tied to your API Key. 
 
-The test endpoint would be a GET request to https://servicehub-api.timico.com/company
+The test endpoint would be a GET request to https://servicehub-api.digitalspace.co.uk/company
 
 ```sh
-$ curl -H "Authorization: Bearer {API KEY}" GET https://servicehub-api.timico.com/company
+$ curl -H "Authorization: Bearer {API KEY}" GET https://servicehub-api.digitalspace.co.uk/company
 ```
 
 The expected result would be a JSON Object, containing your Company's Name (as shown below)
 
 ```json
 {
-    "company": "Timico Ltd"
+    "company": "Digital Space Ltd"
 }
 ```
 
@@ -126,7 +126,7 @@ You included a correct Authorization header, but you don't have permission to pe
 
 #### HTTP/1.1 404 Not Found
 
-The request managed to reach the https://servicehub-api.timico.com/ domain but the endpoint you specified was not found. This could be because of a spelling mistake, attempting to call an endpoint that doesn't exist or an incorrect request type.
+The request managed to reach the https://servicehub-api.digitalspace.co.uk/ domain but the endpoint you specified was not found. This could be because of a spelling mistake, attempting to call an endpoint that doesn't exist or an incorrect request type.
 
 ```json
 {
