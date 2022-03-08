@@ -21,7 +21,7 @@ As long as you meet all the requirements above you'll be able to configure your 
 
  2. Navigate to the 'Web Hooks' page, under the 'Developer' Menu tab (as shown in the image below).
 
-![](https://github.com/timicoltd/ServiceHub-Developer/blob/master/images/Web%20Hooks.png)
+![](https://github.com/timicoltd/ServiceHub-Developer/blob/master/images/Web-Hooks.png)
  
  3. Click the Configure Web Hooks button.
  
