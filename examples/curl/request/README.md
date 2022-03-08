@@ -27,10 +27,10 @@ All of the calls above require an Authorization Bearer token (API Key).
 
 ## Get Requests
 
-Retrieve all requests for your company by sending a GET Request to https://servicehub-api-2.digitalspace.co.uk/request
+Retrieve all requests for your company by sending a GET Request to https://api.digitalspace.co.uk/request
 
 ```sh
-$ curl -H "Authorization: Bearer {API KEY}" GET https://servicehub-api-2.digitalspace.co.uk/request
+$ curl -H "Authorization: Bearer {API KEY}" GET https://api.digitalspace.co.uk/request
 ```
 
 The expected result would be a JSON Object containing an array (called results), to which would contain a list of objects (Requests). An example response would be:
@@ -66,10 +66,10 @@ All other fields are more self explanatory as to what they represent.
 
 ## Get Request
 
-Retrieve information for a single Request by sending a GET Request to https://servicehub-api-2.digitalspace.co.uk/request/{id}
+Retrieve information for a single Request by sending a GET Request to https://api.digitalspace.co.uk/request/{id}
 
 ```sh
-$ curl -H "Authorization: Bearer {API KEY}" GET https://servicehub-api-2.digitalspace.co.uk/request/{id}
+$ curl -H "Authorization: Bearer {API KEY}" GET https://api.digitalspace.co.uk/request/{id}
 ```
 
 Where replacing the {id} for the Request identification number, retrieved in the [Get Requests](#get-requests) endpoint example.
@@ -77,7 +77,7 @@ Where replacing the {id} for the Request identification number, retrieved in the
 Using the ID from above, the complete call would be:
 
 ```sh
-$ curl -H "Authorization: Bearer {API KEY}" GET https://servicehub-api-2.digitalspace.co.uk/request/93984njfidjifdigna989fj9jfuua9h8
+$ curl -H "Authorization: Bearer {API KEY}" GET https://api.digitalspace.co.uk/request/93984njfidjifdigna989fj9jfuua9h8
 ```
 
 The expected response would be a JSON Object representing the Request you have called.
@@ -106,10 +106,10 @@ All other fields are more self explanatory as to what they represent.
 
 ## Get Catalog Items
 
-Retrieve all catalog items for your company by sending a GET Request to https://servicehub-api-2.digitalspace.co.uk/request/catalog-item
+Retrieve all catalog items for your company by sending a GET Request to https://api.digitalspace.co.uk/request/catalog-item
 
 ```sh
-$ curl -H "Authorization: Bearer {API KEY}" GET https://servicehub-api-2.digitalspace.co.uk/request/catalog-item
+$ curl -H "Authorization: Bearer {API KEY}" GET https://api.digitalspace.co.uk/request/catalog-item
 ```
 
 The expected result would be a JSON Object containing an array, to which would contain a list of objects (catalog items). An example response would be:
@@ -132,10 +132,10 @@ A breakdown of this response is:
 
 ## Get Catalog Item Variables
 
-Retrieve all catalog item variables for a single catalog item by sending a POST Request to https://servicehub-api-2.digitalspace.co.uk/request/catalog-item-variables/{id}
+Retrieve all catalog item variables for a single catalog item by sending a POST Request to https://api.digitalspace.co.uk/request/catalog-item-variables/{id}
 
 ```sh
-$ curl -H "Authorization: Bearer {API KEY}" POST https://servicehub-api-2.digitalspace.co.uk/request/catalog-item-variables/{id}
+$ curl -H "Authorization: Bearer {API KEY}" POST https://api.digitalspace.co.uk/request/catalog-item-variables/{id}
 ```
 
 Where replacing the {id} for the Catalog item identification number, retrieved in the [Get Catalog Items](#get-catalog-items) endpoint example.
@@ -143,7 +143,7 @@ Where replacing the {id} for the Catalog item identification number, retrieved i
 Using the ID from above, the complete call would be:
 
 ```sh
-$ curl -H "Authorization: Bearer {API KEY}" POST https://servicehub-api-2.digitalspace.co.uk/catalog-item-variables/98s9df8b9d9fd98gs983jk209320kjhr32
+$ curl -H "Authorization: Bearer {API KEY}" POST https://api.digitalspace.co.uk/catalog-item-variables/98s9df8b9d9fd98gs983jk209320kjhr32
 ```
 
 The expected result would be a JSON Object containing an array, to which would contain a list of objects (variables). An example response would be:
@@ -170,7 +170,7 @@ A breakdown of this response is:
 
 Create a Request for Timico staff to handle, this allows for you to complete the same process available on the ServiceHub Web Portal but via our API, so you can develop your own system to submit a Request for you.
 
-You can create a Request by sending a POST request to https://servicehub-api-2.timico.com/request/{id} with a JSON Body.
+You can create a Request by sending a POST request to https://api.digitalspace.co.uk/request/{id} with a JSON Body.
 
 Where replacing the {id} for the Catalog item identification number, retrieved in the [Get Catalog Items](#get-catalog-items) endpoint example.
 
@@ -199,7 +199,7 @@ $ curl -H "Authorization: Bearer {API KEY}" POST -d '{
 			"Value" : "Variable value",
 		}
 	]
-}' https://servicehub-api-2.timico.com/request/98s9df8b9d9fd98gs983jk209320kjhr32
+}' https://api.digitalspace.co.uk/request/98s9df8b9d9fd98gs983jk209320kjhr32
 ```
 ### Response Object
 
@@ -224,7 +224,7 @@ The expected response would be a JSON Object containing the newly created Reques
 
 Create a Call request for Timico staff to handle, this allows for you to complete the same process available on the ServiceHub Web Portal but via our API, so you can develop your own system to submit a Call request for you.
 
-You can create a Request by sending a POST request to https://servicehub-api-2.timico.com/request with a JSON Body.
+You can create a Request by sending a POST request to https://api.digitalspace.co.uk/request with a JSON Body.
 
 ### Call Object
 
@@ -266,11 +266,11 @@ The expected response would be a JSON Object containing the newly created Call (
 
 ## Update Request Item
 
-You can update a Request item by sending a PUT request to https://servicehub-api-2.timico.com/request/{id} with a Update Request Item JSON Object.
+You can update a Request item by sending a PUT request to https://api.digitalspace.co.uk/request/{id} with a Update Request Item JSON Object.
 
 ### Close a Request Item
 
-To close a Request Item you need to send a PUT request to https://servicehub-api-2.timico.com/request/{id} - with {id} being the identification number of the Request Item.
+To close a Request Item you need to send a PUT request to https://api.digitalspace.co.uk/request/{id} - with {id} being the identification number of the Request Item.
 
 You also need to provide a request object as follows:
 
@@ -298,7 +298,7 @@ $ curl -H "Authorization: Bearer {API KEY}" PUT -d '{
 
 Similar to Closing a Request Item (since you make the exact same call), you just need to send a different state and no closure notes.
 
-To reopen a Request Item you need to send a PUT request to https://servicehub-api-2.timico.com/request/{id} - with {id} being the identification number of the Request Item.
+To reopen a Request Item you need to send a PUT request to https://api.digitalspace.co.uk/request/{id} - with {id} being the identification number of the Request Item.
 
 You also need to provide a request object as follows:
 
@@ -315,14 +315,14 @@ The JSON Object should be sent via a PUT request, as shown:
 ```sh
 $ curl -H "Authorization: Bearer {API KEY}" PUT -d '{
 	"State" : "2"
-}' https://servicehub-api-2.timico.com/request/98s9df8b9d9fd98gs983jk209320kjhr32
+}' https://api.digitalspace.co.uk/request/98s9df8b9d9fd98gs983jk209320kjhr32
 ```
 
 **You will not recieve a response object for this call, you will only get a HTTP/1.1 200 OK Response.**
 
 ### Update Assignment Group 
 
-To update the assignment group on a request item you need to send a PUT request to https://servicehub-api-2.timico.com/request/{id} - with {id} being the identification number of the Request Item.
+To update the assignment group on a request item you need to send a PUT request to https://api.digitalspace.co.uk/request/{id} - with {id} being the identification number of the Request Item.
 
 You also need to provide a request object as follows:
 
@@ -336,7 +336,7 @@ The JSON Object should be sent via a PUT request, as shown:
 ```sh
 $ curl -H "Authorization: Bearer {API KEY}" PUT -d '{
 	"AsignmentGroup" : "Assignment Group Identification number",
-}' https://servicehub-api-2.timico.com/request/98s9df8b9d9fd98gs983jk209320kjhr32
+}' https://api.digitalspace.co.uk/request/98s9df8b9d9fd98gs983jk209320kjhr32
 ```
 
 **You will not recieve a response object for this call, you will only get a HTTP/1.1 200 OK Response.**
@@ -345,10 +345,10 @@ $ curl -H "Authorization: Bearer {API KEY}" PUT -d '{
 
 Knowing the Request identification number, you can retrieve a list of all the comments.
 
-To get comments for a specific request you need to send a GET request to https://servicehub-api-2.timico.com/request/{id}/comments - with {id} being the identification number of the Request.
+To get comments for a specific request you need to send a GET request to https://api.digitalspace.co.uk/request/{id}/comments - with {id} being the identification number of the Request.
 
 ```sh
-$ curl -H "Authorization: Bearer {API KEY}" GET https://servicehub-api-2.timico.com/request/93984njfidjifdigna989fj9jfuua9h8/comments
+$ curl -H "Authorization: Bearer {API KEY}" GET https://api.digitalspace.co.uk/request/93984njfidjifdigna989fj9jfuua9h8/comments
 ```
 
 The expected response would be a JSON Object, containg an Array of a Comment Container, a comment container would contain the group name (representing the date of the comment, for when multiple comments are made on the same date) and another array of comments (Comment Object's).
@@ -390,7 +390,7 @@ All other fields are more self explanatory as to what they represent, though Bod
 
 Knowing the Request identification number, you can add a comment to the request.
 
-To add a comment to a specific request you need to send a POST request to https://servicehub-api-2.timico.com/request/{id}/comment - with {id} being the identification number of the Request.
+To add a comment to a specific request you need to send a POST request to https://api.digitalspace.co.uk/request/{id}/comment - with {id} being the identification number of the Request.
 
 You will need to send a JSON Object with this request, containing the following:
 
@@ -405,14 +405,14 @@ The JSON object will need to be sent via a POST request, as shown:
 ```sh
 $ curl -H "Authorization: Bearer {API KEY}" POST -d '{
     "Comments" : "Testing Comments from ServiceHub Customer API"
-}' https://servicehub-api-2.timico.com/request/98s9df8b9d9fd98gs983jk209320kjhr32/comment
+}' https://api.digitalspace.co.uk/request/98s9df8b9d9fd98gs983jk209320kjhr32/comment
 ```
 
 ## Add Attachment
 
 Knowing the Request item identification number, you can attach files to the request item.
 
-To attach files to a specific request item you need to send a POST request to https://servicehub-api-2.timico.com/request/{id}/attachment - with {id} being the identification number of the request item.
+To attach files to a specific request item you need to send a POST request to https://api.digitalspace.co.uk/request/{id}/attachment - with {id} being the identification number of the request item.
 
 You will need to send a JSON Object with this request, containing the following:
 
@@ -441,7 +441,7 @@ $ curl -H "Authorization: Bearer {API KEY}" POST -d '{
 			"ContentType" : "Content type"
 		}
 	]
-}' https://servicehub-api-2.timico.com/request/98s9df8b9d9fd98gs983jk209320kjhr32/attachment
+}' https://api.digitalspace.co.uk/request/98s9df8b9d9fd98gs983jk209320kjhr32/attachment
 ```
 **The maximum size limit for a file is 2MB.** 
 
