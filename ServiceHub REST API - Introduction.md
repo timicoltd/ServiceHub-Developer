@@ -34,7 +34,7 @@ As long as all requirements have been met, you'll be able to generate your API K
 
  1. To generate an API Key you will need to login to the ServiceHub Web Portal at https://portal.digitalspace.co.uk/login.
 
- 2. Navigate to the 'Api Keys' page, under the 'Developer' Menu tab (as shown in the image below).
+ 2. Navigate to the 'Credentials' page, under the 'Developer' Menu tab (as shown in the image below).
 
 ![](https://github.com/timicoltd/ServiceHub-Developer/blob/master/images/API%20Keys.png)
  
