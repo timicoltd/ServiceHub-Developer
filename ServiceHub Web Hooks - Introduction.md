@@ -39,7 +39,7 @@ As long as you meet all the requirements above you'll be able to configure your 
  * Creating a Web Hook with the following:
     * Source = Incidents
     * Action = Create
-    * URL = servicehub-api.digitalspace.co.uk/web-hooks/incident-created
+    * URL = https://api.digitalspace.co.uk/web-hooks/incident-created
     
 When an **'Incident'** (Source) is **'Created'** (Action) with us at Digital Space, either via the [ServiceHub Web Portal](https://portal.digitalspace.co.uk/) or [ServiceHub REST API](https://github.com/timicoltd/ServiceHub-Developer/blob/master/examples/curl/incident/README.md#create-incident) then we would send a HTTP POST request to **'servicehub-api.digitalspace.co.uk/web-hooks/incident-created'** (URL), with a JSON object of the incident that has been created.
  
