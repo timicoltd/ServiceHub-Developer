@@ -1,12 +1,12 @@
 # ServiceHub REST API
 
-Timico ServiceHub REST API allows for you to make HTTP POST/GET/PUT/DELETE requests to specific endpoints that we have developed in order to create, manage and delete parts of the ServiceHub package from your own integration rather than the ServiceHub Web Portal.
+Digital Space ServiceHub REST API allows for you to make HTTP POST/GET/PUT/DELETE requests to specific endpoints that we have developed in order to create, manage and delete parts of the ServiceHub package from your own integration rather than the ServiceHub Web Portal.
 
 _**Please note that all API calls will be made as a 'super user' - which basically means an admin level user is created on behalf of your company and linked to your API Key(s). When any API call is made, fields such as 'Created By', 'Requested By' and 'Updated By' will be pre-populated with your API Key's user rather than a specific user from your company. A future update will bring functionality to allow these to be provided within a request object (so that specific user's within your company can be assigned to an Incident for example).**_
 
 ## Requirements
 
-* Must be a Timico Customer - [Not a customer?](#not-a-customer)
+* Must be a Digital Space Customer - [Not a customer?](#not-a-customer)
 * Must have an account on the ServiceHub Web Portal - [Don't have an account?](#dont-have-an-account)
 * Must have the 'Admin' level permissions in order to view the 'Company Settings' - [Not an Admin?](#not-an-admin)
 
@@ -26,13 +26,13 @@ Here are a few steps to help you get started:
 
 ## Getting an API Key
 
-Getting an API Key is done via the ServiceHub Web Portal, found at https://portal.timico.com.
+Getting an API Key is done via the ServiceHub Web Portal, found at https://portal.digitalspace.co.uk/.
 
 ### Process
 
 As long as all requirements have been met, you'll be able to generate your API Key.
 
- 1. To generate an API Key you will need to login to the ServiceHub Web Portal at https://portal.timico.com/login.
+ 1. To generate an API Key you will need to login to the ServiceHub Web Portal at https://portal.digitalspace.co.uk/login.
 
  2. Navigate to the 'Api Keys' page, under the 'Developer' Menu tab (as shown in the image below).
 
@@ -88,7 +88,7 @@ An example successful response (with a JSON object) would be:
 
 ```json
 {
-    "company": "Timico Ltd"
+    "company": "Digital Space Ltd"
 }
 ```
 
@@ -166,23 +166,23 @@ Whilst an error has occured, it's known that it can, so we have caught it and pr
 
 ### Not a Customer?
 
-To use the ServiceHub REST API, you will need to be a customer of Timico. ServiceHub is a product which allows our customers to manage and view all aspects of a customers account. 
+To use the ServiceHub REST API, you will need to be a customer of Digital Space. ServiceHub is a product which allows our customers to manage and view all aspects of a customers account. 
 
-[ServiceHub Web Portal](https://portal.timico.com) is our main product, which provides an online portal for you to view your account (or company if Admin level) as well as interact with us for support. 
+[ServiceHub Web Portal](https://portal.digitalspace.co.uk/) is our main product, which provides an online portal for you to view your account (or company if Admin level) as well as interact with us for support. 
 
 [ServiceHub Developer](https://github.com/timicoltd/ServiceHub-Developer) is our extended version of the Web Portal, it allows for our customers to directly call our services for their own infrastructure and software, to benefit from the collaboration of services.
 
 ### Don't have an account?
 
-So you're a customer of Timico but don't have a ServiceHub Account and wish to use our [ServiceHub Web Portal](https://portal.timico.com) and our [ServiceHub Developer](https://github.com/timicoltd/ServiceHub-Developer).
+So you're a customer of Digital Space but don't have a ServiceHub Account and wish to use our [ServiceHub Web Portal](https://portal.digitalspace.co.uk/) and our [ServiceHub Developer](https://github.com/timicoltd/ServiceHub-Developer).
 
-If you head to the [ServiceHub Web Portal](https://portal.timico.com/login) and choose Register from the Login screen, you will be able to follow the process of registering for an account.
+If you head to the [ServiceHub Web Portal](https://portal.digitalspace.co.uk/login) and choose Register from the Login screen, you will be able to follow the process of registering for an account.
 
-Once you have supplied your email address, and follow the link within your email, you'll be able to provide us with some information about who you are and set up your password for your account. If you are from a company which already has users with the ServiceHub Web Portal, and your company admin has setup approved domains, you will automatically be registered, otherwise you will be required to wait whilst a Timico memeber of staff can approve your request for an account and link you to tour company.
+Once you have supplied your email address, and follow the link within your email, you'll be able to provide us with some information about who you are and set up your password for your account. If you are from a company which already has users with the ServiceHub Web Portal, and your company admin has setup approved domains, you will automatically be registered, otherwise you will be required to wait whilst a Digital Space memeber of staff can approve your request for an account and link you to tour company.
 
 ### Not an Admin?
 
-So you have a Timico account but you're not an admin so cannot generate API Keys. This is easy enough to fix, if you're the developer for your company and cannot get Admin level access, then an Admin within the company can generate an API Key for you and provide it to you.
+So you have a Digital Space account but you're not an admin so cannot generate API Keys. This is easy enough to fix, if you're the developer for your company and cannot get Admin level access, then an Admin within the company can generate an API Key for you and provide it to you.
 
 If you are allowed Admin level access to ServiceHub then you may raise a ticket to us, requesting for Admin level access for the purpose of generating API Keys. This should be granted within due time so long as you meet the requirements.
 
@@ -195,4 +195,4 @@ Now that you have completed the ServiceHub REST API introduction, we have create
 * [Incidents](https://github.com/timicoltd/ServiceHub-Developer/blob/master/examples/curl/incident/README.md)
 * [Requests](https://github.com/timicoltd/ServiceHub-Developer/blob/master/examples/curl/request/README.md)
 
-These guides have detailed steps on how to call the specific endpoints and are the only guides Timico will provide on interacting with the ServiceHub REST API.
+These guides have detailed steps on how to call the specific endpoints and are the only guides Digital Space will provide on interacting with the ServiceHub REST API.
