@@ -1,6 +1,6 @@
 # ServiceHub REST API (Requests)
 
-Timico ServiceHub REST API allows you to call the Request endpoint to get all requests for your company, more information on a specific request, create a request, view comments for a request and create new comments on a request.
+Digital Space ServiceHub REST API allows you to call the Request endpoint to get all requests for your company, more information on a specific request, create a request, view comments for a request and create new comments on a request.
 
 **Please note that all API calls will be made as a 'super user' - which basically means an admin level user is created on behalf of your company and linked to your API Key(s). When any API call is made, fields such as 'Created By', 'Requested By' and 'Updated By' will be pre-populated with your API Key's user rather than a specific user from your company. A future update will bring functionality to allow these to be provided within a request object (so that specific user's within your company can be assigned to an Incident for example).**
 
@@ -27,10 +27,10 @@ All of the calls above require an Authorization Bearer token (API Key).
 
 ## Get Requests
 
-Retrieve all requests for your company by sending a GET Request to https://servicehub-api-2.timico.com/request
+Retrieve all requests for your company by sending a GET Request to https://servicehub-api-2.digitalspace.co.uk/request
 
 ```sh
-$ curl -H "Authorization: Bearer {API KEY}" GET https://servicehub-api-2.timico.com/request
+$ curl -H "Authorization: Bearer {API KEY}" GET https://servicehub-api-2.digitalspace.co.uk/request
 ```
 
 The expected result would be a JSON Object containing an array (called results), to which would contain a list of objects (Requests). An example response would be:
@@ -66,10 +66,10 @@ All other fields are more self explanatory as to what they represent.
 
 ## Get Request
 
-Retrieve information for a single Request by sending a GET Request to https://servicehub-api-2.timico.com/request/{id}
+Retrieve information for a single Request by sending a GET Request to https://servicehub-api-2.digitalspace.co.uk/request/{id}
 
 ```sh
-$ curl -H "Authorization: Bearer {API KEY}" GET https://servicehub-api-2.timico.com/request/{id}
+$ curl -H "Authorization: Bearer {API KEY}" GET https://servicehub-api-2.digitalspace.co.uk/request/{id}
 ```
 
 Where replacing the {id} for the Request identification number, retrieved in the [Get Requests](#get-requests) endpoint example.
@@ -77,7 +77,7 @@ Where replacing the {id} for the Request identification number, retrieved in the
 Using the ID from above, the complete call would be:
 
 ```sh
-$ curl -H "Authorization: Bearer {API KEY}" GET https://servicehub-api-2.timico.com/request/93984njfidjifdigna989fj9jfuua9h8
+$ curl -H "Authorization: Bearer {API KEY}" GET https://servicehub-api-2.digitalspace.co.uk/request/93984njfidjifdigna989fj9jfuua9h8
 ```
 
 The expected response would be a JSON Object representing the Request you have called.
@@ -96,8 +96,8 @@ The expected response would be a JSON Object representing the Request you have c
 }
 ```
 * **ID** - The identification number for this request (this ID would be used in future calls and is used to address a certain Request via the API).
-* **Request Item Number** - This is the Request Item reference number (this is used for referencing the Request Item's of a Request via the ServiceHub Web Portal and with Timico staff).
-* **Request Number** - This is the Request reference number (this is used for referencing the Request via the ServiceHub Web Portal and with Timico staff).
+* **Request Item Number** - This is the Request Item reference number (this is used for referencing the Request Item's of a Request via the ServiceHub Web Portal and with Digital Space staff).
+* **Request Number** - This is the Request reference number (this is used for referencing the Request via the ServiceHub Web Portal and with Digital Space staff).
 * **Short Description** - A brief description of the Request that has been raised.
 * **Description** - A full description of the Request.
 * **State** - What state is the Request in, this could be 'New' or 'Closed' for example.
@@ -106,10 +106,10 @@ All other fields are more self explanatory as to what they represent.
 
 ## Get Catalog Items
 
-Retrieve all catalog items for your company by sending a GET Request to https://servicehub-api-2.timico.com/request/catalog-item
+Retrieve all catalog items for your company by sending a GET Request to https://servicehub-api-2.digitalspace.co.uk/request/catalog-item
 
 ```sh
-$ curl -H "Authorization: Bearer {API KEY}" GET https://servicehub-api-2.timico.com/request/catalog-item
+$ curl -H "Authorization: Bearer {API KEY}" GET https://servicehub-api-2.digitalspace.co.uk/request/catalog-item
 ```
 
 The expected result would be a JSON Object containing an array, to which would contain a list of objects (catalog items). An example response would be:
@@ -132,10 +132,10 @@ A breakdown of this response is:
 
 ## Get Catalog Item Variables
 
-Retrieve all catalog item variables for a single catalog item by sending a POST Request to https://servicehub-api-2.timico.com/request/catalog-item-variables/{id}
+Retrieve all catalog item variables for a single catalog item by sending a POST Request to https://servicehub-api-2.digitalspace.co.uk/request/catalog-item-variables/{id}
 
 ```sh
-$ curl -H "Authorization: Bearer {API KEY}" POST https://servicehub-api-2.timico.com/request/catalog-item-variables/{id}
+$ curl -H "Authorization: Bearer {API KEY}" POST https://servicehub-api-2.digitalspace.co.uk/request/catalog-item-variables/{id}
 ```
 
 Where replacing the {id} for the Catalog item identification number, retrieved in the [Get Catalog Items](#get-catalog-items) endpoint example.
@@ -143,7 +143,7 @@ Where replacing the {id} for the Catalog item identification number, retrieved i
 Using the ID from above, the complete call would be:
 
 ```sh
-$ curl -H "Authorization: Bearer {API KEY}" POST https://servicehub-api-2.timico.com/catalog-item-variables/98s9df8b9d9fd98gs983jk209320kjhr32
+$ curl -H "Authorization: Bearer {API KEY}" POST https://servicehub-api-2.digitalspace.co.uk/catalog-item-variables/98s9df8b9d9fd98gs983jk209320kjhr32
 ```
 
 The expected result would be a JSON Object containing an array, to which would contain a list of objects (variables). An example response would be:
