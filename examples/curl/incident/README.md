@@ -1,6 +1,6 @@
 # ServiceHub REST API (Incidents)
 
-Timico ServiceHub REST API allows you to call the Incident endpoint to get all incidents for your company, more information on a specific incident, create an incident, view comments for an incident and create new comments on an incident.
+Digital Space ServiceHub REST API allows you to call the Incident endpoint to get all incidents for your company, more information on a specific incident, create an incident, view comments for an incident and create new comments on an incident.
 
 **Please note that all API calls will be made as a 'super user' - which basically means an admin level user is created on behalf of your company and linked to your API Key(s). When any API call is made, fields such as 'Created By', 'Requested By' and 'Updated By' will be pre-populated with your API Key's user rather than a specific user from your company. A future update will bring functionality to allow these to be provided within a request object (so that specific user's within your company can be assigned to an Incident for example).**
 
@@ -24,10 +24,10 @@ All of the calls above require an Authorization Bearer token (API Key).
 
 ## Get Incidents
 
-Retrieve all incidents for your company by sending a GET Request to https://servicehub-api-2.timico.com/incident
+Retrieve all incidents for your company by sending a GET Request to https://servicehub-api-2.digitalspace.co.uk/incident
 
 ```sh
-$ curl -H "Authorization: Bearer {API KEY}" GET https://servicehub-api-2.timico.com/incident
+$ curl -H "Authorization: Bearer {API KEY}" GET https://servicehub-api-2.digitalspace.co.uk/incident
 ```
 
 The expected result would be a JSON Object containing an array (called results), to which would contain a list of objects (Incidents). An example response would be:
