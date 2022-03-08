@@ -36,7 +36,7 @@ As long as all requirements have been met, you'll be able to generate your API K
 
  2. Navigate to the 'Api Keys' page, under the 'Developer' Menu tab (as shown in the image below).
 
-![](https://github.com/timicoltd/ServiceHub-Developer/blob/master/images/Api%20Keys.png)
+![](https://github.com/timicoltd/ServiceHub-Developer/blob/master/images/API%20Keys.png)
  
  3. Click the Generate API Key button.
  
