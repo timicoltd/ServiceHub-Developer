@@ -56,8 +56,8 @@ The expected result would be a JSON Object containing an array (called results),
 A breakdown of this response is:
 
 * **ID** - The identification number for this request (this ID would be used in future calls and is used to address a certain Request via the API).
-* **Request Item Number** - This is the Request Item reference number (this is used for referencing the Request Item's of a Request via the ServiceHub Web Portal and with Timico staff).
-* **Request Number** - This is the Request reference number (this is used for referencing the Request via the ServiceHub Web Portal and with Timico staff).
+* **Request Item Number** - This is the Request Item reference number (this is used for referencing the Request Item's of a Request via the ServiceHub Web Portal and with Digital Space staff).
+* **Request Number** - This is the Request reference number (this is used for referencing the Request via the ServiceHub Web Portal and with Digital Space staff).
 * **Short Description** - A brief description of the Request that has been raised.
 * **Description** - A full description of the Request.
 * **State** - What state is the Request in, this could be 'New' or 'Closed' for example.
@@ -290,7 +290,7 @@ The JSON Object should be sent via a PUT request, as shown:
 $ curl -H "Authorization: Bearer {API KEY}" PUT -d '{
 	"State" : "3",
 	"CloseNotes" : "Why are you closing the Request Item?"
-}' https://servicehub-api-2.timico.com/request/98s9df8b9d9fd98gs983jk209320kjhr32
+}' https://api.digitalspace.co.uk/request/98s9df8b9d9fd98gs983jk209320kjhr32
 ```
 **You will not recieve a response object for this call, you will only get a HTTP/1.1 200 OK Response.**
 
