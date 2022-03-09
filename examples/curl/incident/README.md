@@ -61,7 +61,7 @@ The expected result would be a JSON Object containing an array (called results),
 A breakdown of this response is:
 
 * **ID** - The identification number for this incident (this ID would be used in future calls and is used to address a certain Incident via the API).
-* **Number** - This is the Incident reference number (this is used for referencing the Incident via the ServiceHub Web Portal and with Timico staff).
+* **Number** - This is the Incident reference number (this is used for referencing the Incident via the ServiceHub Web Portal and with Digital Space staff).
 * **Short Description** - A brief description of the Incident that has been raised.
 * **Description** - A full description of the Incident (to be aid the resolution of the Incident).
 * **Priority** - Depending on the context, an Incident is given a priority number.
@@ -75,7 +75,7 @@ All other fields are more self explanatory as to what they represent.
 Retrieve information for a single Incident by sending a GET Request to https://api.digitalspace.co.uk/incident/{id}
 
 ```sh
-$ curl -H "Authorization: Bearer {API KEY}" GET https://servicehub-api-2.timico.com/incident/{id}
+$ curl -H "Authorization: Bearer {API KEY}" GET https://api.digitalspace.co.uk/incident/{id}
 ```
 
 Where replacing the {id} for the Incident identification number, retrieved in the [Get Incidents](#get-incidents) endpoint example.
