@@ -74,7 +74,7 @@ The expected result would be a JSON Object, containing your Company's Name (as s
 
 ```json
 {
-    "company": "Digital Space Ltd"
+    "company": "Digital Space Group Ltd"
 }
 ```
 
@@ -88,7 +88,7 @@ An example successful response (with a JSON object) would be:
 
 ```json
 {
-    "company": "Digital Space Ltd"
+    "company": "Digital Space Group Ltd"
 }
 ```
 
